@@ -12,196 +12,226 @@
   box-sizing:border-box;
 }
 
-html{
+html,
+body{
+  margin:0;
   min-height:100%;
 }
 
 body{
-  margin:0;
   min-height:100vh;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   color:#111;
-  position:relative;
   background:#111;
+  position:relative;
 }
 
-/* =========================
-   FONDO FACANI
-========================= */
+/* =====================================================
+   FONDO VERTICAL FACANI 9:16
+===================================================== */
 
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background-image:url("facani-web-fondo.jpg");
+
+  background-image:url("facani-web-fondo-vertical.jpg");
+
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
+
   z-index:-2;
 }
 
-/* Capa de contraste */
+/* =====================================================
+   CAPA DE CONTRASTE
+===================================================== */
+
 body::after{
   content:"";
   position:fixed;
   inset:0;
+
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.35) 0%,
-      rgba(0,0,0,0.18) 35%,
-      rgba(0,0,0,0.62) 100%
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.12) 32%,
+      rgba(0,0,0,0.42) 68%,
+      rgba(0,0,0,0.72) 100%
     );
+
   z-index:-1;
 }
 
-/* =========================
-   TARJETA PRINCIPAL
-========================= */
+/* =====================================================
+   CONTENEDOR
+===================================================== */
 
 .card{
   width:100%;
   max-width:430px;
   min-height:100vh;
+
   margin:auto;
-  padding:24px 20px 30px;
+
+  padding:22px 18px 30px;
 }
 
-/* =========================
+/* =====================================================
    TAP5
-========================= */
+===================================================== */
 
 .logo{
   width:max-content;
-  margin:0 auto 22px;
+
+  margin:0 auto 20px;
+
   padding:7px 18px;
+
   border-radius:30px;
+
   background:rgba(0,0,0,0.78);
+
   color:#fff;
-  font-size:23px;
+
+  font-size:22px;
   font-weight:900;
+
   letter-spacing:2px;
-  box-shadow:0 5px 18px rgba(0,0,0,0.35);
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.35);
 }
 
 .logo span{
   color:#ED1C24;
 }
 
-/* =========================
+/* =====================================================
    AVATAR
-========================= */
+===================================================== */
 
 .avatar{
-  width:88px;
-  height:88px;
+  width:82px;
+  height:82px;
+
+  margin:0 auto 13px;
+
   border-radius:50%;
-  background:#111;
-  color:#fff;
-  border:3px solid #fff;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  margin:0 auto 14px;
+  background:#111;
 
-  font-size:27px;
+  color:#fff;
+
+  border:3px solid #fff;
+
+  font-size:26px;
   font-weight:800;
 
   box-shadow:
     0 5px 20px rgba(0,0,0,0.45);
 }
 
-/* =========================
+/* =====================================================
    NOMBRE
-========================= */
+===================================================== */
 
 h1{
   margin:0 0 5px;
+
   text-align:center;
 
   color:#fff;
 
-  font-size:26px;
+  font-size:25px;
   font-weight:800;
 
   text-shadow:
-    0 2px 8px rgba(0,0,0,0.75);
+    0 2px 8px rgba(0,0,0,0.85);
 }
 
-/* =========================
+/* =====================================================
    EMPRESA
-========================= */
+===================================================== */
 
 .company{
-  margin-bottom:23px;
+  margin-bottom:20px;
 
   text-align:center;
 
   color:#ED1C24;
 
-  font-size:15px;
+  font-size:14px;
   font-weight:900;
+
   letter-spacing:.5px;
 
   text-shadow:
-    0 2px 6px rgba(0,0,0,0.8);
+    0 2px 7px rgba(0,0,0,0.9);
 }
 
-/* =========================
+/* =====================================================
    INFORMACIÓN
-========================= */
+===================================================== */
 
 .info{
   width:100%;
+
   display:grid;
-  gap:11px;
-  margin-bottom:18px;
+
+  gap:10px;
+
+  margin-bottom:17px;
 }
 
-/* =========================
+/* =====================================================
    OPCIONES
-========================= */
+===================================================== */
 
 .item{
   display:flex;
   align-items:center;
 
-  gap:13px;
+  gap:12px;
 
   width:100%;
 
-  padding:13px 14px;
+  padding:12px 13px;
 
-  border-radius:15px;
+  border-radius:14px;
 
-  background:rgba(255,255,255,0.94);
+  background:rgba(255,255,255,0.95);
 
   color:#111;
+
   text-decoration:none;
+
+  border-left:4px solid #ED1C24;
 
   box-shadow:
     0 5px 18px rgba(0,0,0,0.28);
 
-  border-left:4px solid #ED1C24;
-
   transition:
-    transform .15s ease,
-    background .15s ease;
+    transform .15s ease;
 }
 
 .item:active{
   transform:scale(.98);
 }
 
-/* =========================
+/* =====================================================
    ICONOS
-========================= */
+===================================================== */
 
 .icon{
-  width:37px;
-  height:37px;
+  width:36px;
+  height:36px;
 
   flex-shrink:0;
 
@@ -219,12 +249,12 @@ h1{
   font-weight:800;
 }
 
-/* =========================
+/* =====================================================
    TEXTO
-========================= */
+===================================================== */
 
 .text{
-  font-size:14px;
+  font-size:13px;
   line-height:1.35;
 
   word-break:break-word;
@@ -239,12 +269,13 @@ h1{
 
   font-size:10px;
   font-weight:700;
+
   letter-spacing:.3px;
 }
 
-/* =========================
+/* =====================================================
    BOTONES
-========================= */
+===================================================== */
 
 .save{
   display:block;
@@ -253,7 +284,7 @@ h1{
 
   margin-top:9px;
 
-  padding:14px 10px;
+  padding:13px 10px;
 
   border-radius:13px;
 
@@ -266,93 +297,106 @@ h1{
 
   font-size:14px;
   font-weight:900;
-  letter-spacing:.2px;
 
   box-shadow:
     0 5px 16px rgba(0,0,0,0.35);
 
   transition:
-    transform .15s ease,
-    filter .15s ease;
+    transform .15s ease;
 }
 
 .save:active{
   transform:scale(.98);
 }
 
-/* =========================
+/* =====================================================
    FACEBOOK
-========================= */
+===================================================== */
 
 .facebook{
   background:#111;
 }
 
-/* =========================
+/* =====================================================
    NOTA
-========================= */
+===================================================== */
 
 .note{
-  margin-top:12px;
+  margin-top:11px;
 
   color:#fff;
 
   text-align:center;
 
-  font-size:11px;
+  font-size:10.5px;
   line-height:1.4;
 
   text-shadow:
-    0 2px 7px rgba(0,0,0,0.8);
+    0 2px 7px rgba(0,0,0,0.85);
 }
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer{
-  margin-top:30px;
-  padding-top:20px;
+  margin-top:26px;
+  padding-top:18px;
 
   color:rgba(255,255,255,0.85);
 
   text-align:center;
 
-  font-size:11px;
+  font-size:10.5px;
+
   letter-spacing:1px;
 
   text-shadow:
-    0 2px 7px rgba(0,0,0,0.8);
+    0 2px 7px rgba(0,0,0,0.9);
 }
 
-/* =========================
-   AJUSTES PARA CELULARES
-========================= */
+/* =====================================================
+   CELULARES PEQUEÑOS
+===================================================== */
 
-@media(max-width:430px){
+@media(max-width:380px){
 
   .card{
-    padding:20px 16px 28px;
+    padding:18px 14px 25px;
   }
 
   .logo{
-    font-size:21px;
-    margin-bottom:20px;
+    font-size:20px;
+    margin-bottom:17px;
   }
 
   .avatar{
-    width:82px;
-    height:82px;
+    width:76px;
+    height:76px;
+    font-size:24px;
   }
 
   h1{
-    font-size:24px;
+    font-size:23px;
+  }
+
+  .company{
+    font-size:13px;
+  }
+
+  .item{
+    padding:11px 12px;
+  }
+
+  .save{
+    padding:12px 10px;
   }
 
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -363,32 +407,49 @@ h1{
     TAP<span>5</span>
   </div>
 
+
   <!-- AVATAR -->
   <div class="avatar">
     AV
   </div>
 
-  <!-- DATOS DEL CONTACTO -->
 
-  <h1>Abel Villar</h1>
+  <!-- NOMBRE -->
+  <h1>
+    Abel Villar
+  </h1>
 
+
+  <!-- EMPRESA -->
   <div class="company">
     CARROCERÍAS FACANI
   </div>
 
+
+  <!-- INFORMACIÓN -->
   <section class="info">
+
 
     <!-- TELÉFONO -->
     <a
       class="item"
       href="tel:+51936927678"
     >
-      <div class="icon">☎</div>
+
+      <div class="icon">
+        ☎
+      </div>
 
       <div class="text">
-        <span class="label">TELÉFONO</span>
+
+        <span class="label">
+          TELÉFONO
+        </span>
+
         936 927 678
+
       </div>
+
     </a>
 
 
@@ -397,12 +458,21 @@ h1{
       class="item"
       href="mailto:ventas@carroceriasfacani.com.pe"
     >
-      <div class="icon">✉</div>
+
+      <div class="icon">
+        ✉
+      </div>
 
       <div class="text">
-        <span class="label">CORREO</span>
+
+        <span class="label">
+          CORREO
+        </span>
+
         ventas@carroceriasfacani.com.pe
+
       </div>
+
     </a>
 
 
@@ -413,13 +483,23 @@ h1{
       target="_blank"
       rel="noopener"
     >
-      <div class="icon">⌖</div>
+
+      <div class="icon">
+        ⌖
+      </div>
 
       <div class="text">
-        <span class="label">DIRECCIÓN</span>
+
+        <span class="label">
+          DIRECCIÓN
+        </span>
+
         Jr. Ancash Mz. F Lt. 1B Asoc. Huerta San Pedro - Puente Piedra
+
       </div>
+
     </a>
+
 
   </section>
 
@@ -450,7 +530,7 @@ h1{
   </div>
 
 
-  <!-- PIE -->
+  <!-- FOOTER -->
   <div class="footer">
     Tu identidad digital, en un toque.
   </div>
