@@ -3,191 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
+
 <title>Genaro Quiñones | CARROCERÍAS LA UNIVERSAL</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
-margin:0;
-background:#f3f4f6;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-color:#111;
+  margin:0;
+  background:#f3f4f6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#111;
 }
 
 .card{
-max-width:430px;
-min-height:100vh;
-margin:auto;
-background:#fff;
-padding:28px 22px 35px;
+  max-width:430px;
+  min-height:100vh;
+  margin:auto;
+  background:#fff;
+  padding:22px 22px 28px;
 }
 
 .logo{
-font-size:25px;
-font-weight:900;
-letter-spacing:1px;
-text-align:center;
-margin-bottom:60px;
+  font-weight:900;
+  font-size:25px;
+  letter-spacing:1.5px;
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.logo span{
+  font-weight:500;
 }
 
 .avatar{
-width:92px;
-height:92px;
-border-radius:50%;
-background:#111;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-font-weight:800;
-margin:0 auto 28px;
+  width:92px;
+  height:92px;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  font-weight:700;
+  margin:0 auto 16px;
 }
 
 h1{
-font-size:27px;
-margin:0 0 8px;
-text-align:center;
+  font-size:27px;
+  margin:0 0 6px;
+  text-align:center;
 }
 
 .company{
-font-size:15px;
-font-weight:700;
-color:#666;
-text-align:center;
-margin-bottom:38px;
+  font-size:15px;
+  font-weight:600;
+  color:#666;
+  text-align:center;
+  margin-bottom:24px;
 }
 
 .info{
-width:100%;
-display:grid;
-gap:11px;
-margin-bottom:28px;
+  width:100%;
+  display:grid;
+  gap:11px;
+  margin-bottom:20px;
 }
 
 .item{
-display:flex;
-align-items:center;
-gap:13px;
-background:#f7f7f7;
-border-radius:22px;
-padding:16px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  background:#f7f7f7;
+  border-radius:15px;
+  padding:14px 15px;
+  text-decoration:none;
+  color:#111;
 }
 
 .icon{
-width:34px;
-height:34px;
-border-radius:10px;
-background:#111;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-flex-shrink:0;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#111;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:17px;
 }
 
 .text{
-font-size:14px;
-line-height:1.35;
-word-break:break-word;
+  font-size:14px;
+  line-height:1.35;
+  word-break:break-word;
 }
 
 .label{
-display:block;
-font-size:11px;
-color:#777;
-margin-bottom:3px;
+  display:block;
+  font-size:11px;
+  color:#777;
+  margin-bottom:2px;
 }
 
 .save{
-display:block;
-width:100%;
-text-align:center;
-background:#111;
-color:#fff;
-text-decoration:none;
-padding:19px 12px;
-border-radius:22px;
-font-size:18px;
-font-weight:800;
-margin-top:12px;
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:13px;
+  padding:14px 10px;
+  font-weight:700;
+  margin-top:9px;
 }
 
 .note{
-font-size:11px;
-color:#888;
-text-align:center;
-margin-top:20px;
-line-height:1.4;
+  font-size:11px;
+  color:#888;
+  text-align:center;
+  line-height:1.4;
+  margin-top:12px;
 }
 
 .footer{
-text-align:center;
-color:#aaa;
-font-size:13px;
-margin-top:90px;
+  margin-top:30px;
+  padding-top:30px;
+  font-size:11px;
+  color:#aaa;
+  text-align:center;
+  letter-spacing:1px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<main class="card">
 
-<div class="logo">TAP5</div>
+  <div class="logo">TAP<span>5</span></div>
 
-<div class="avatar">GQ</div>
+  <div class="avatar">GQ</div>
 
-<h1>Genaro Quiñones</h1>
+  <h1>Genaro Quiñones</h1>
 
-<div class="company">CARROCERÍAS LA UNIVERSAL</div>
+  <div class="company">CARROCERÍAS LA UNIVERSAL</div>
 
-<div class="info">
+  <section class="info">
 
-<div class="item">
-<div class="icon">📞</div>
-<div class="text">
-<span class="label">TELÉFONO</span>
-998 243 139
-</div>
-</div>
+    <!-- TELÉFONO -->
+    <a class="item" href="tel:+51998243139">
+      <div class="icon">☎</div>
+      <div class="text">
+        <span class="label">TELÉFONO</span>
+        998 243 139
+      </div>
+    </a>
 
-<div class="item">
-<div class="icon">✉️</div>
-<div class="text">
-<span class="label">CORREO</span>
-ventas2@carroceriaslauniversal.com.pe
-</div>
-</div>
+    <!-- CORREO -->
+    <a class="item" href="mailto:ventas2@carroceriaslauniversal.com.pe">
+      <div class="icon">✉</div>
+      <div class="text">
+        <span class="label">CORREO</span>
+        ventas2@carroceriaslauniversal.com.pe
+      </div>
+    </a>
 
-<div class="item">
-<div class="icon">⌖</div>
-<div class="text">
-<span class="label">DIRECCIÓN</span>
-Av. Alfredo Mendiola Nº 7481-7467
-</div>
-</div>
+    <!-- DIRECCIÓN - GOOGLE MAPS LA UNIVERSAL -->
+    <a
+      class="item"
+      href="https://maps.app.goo.gl/zVmtnuzDtx2xQvyUA"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="icon">⌂</div>
+      <div class="text">
+        <span class="label">DIRECCIÓN</span>
+        Av. Alfredo Mendiola Nº 7481-7467
+      </div>
+    </a>
 
-</div>
+  </section>
 
-<a class="save" href="contact.vcf">
-GUARDAR CONTACTO
-</a>
-<a class="save" href="https://www.facebook.com/carroceriaslauniversalperu?locale=es_LA" target="_blank">
+  <!-- GUARDAR CONTACTO -->
+  <a class="save" href="contact.vcf">
+    GUARDAR CONTACTO
+  </a>
+
+  <!-- FACEBOOK -->
+  <a
+    class="save"
+    href="https://www.facebook.com/carroceriaslauniversalperu?locale=es_LA"
+    target="_blank"
+    rel="noopener"
+  >
     📘 VISITAR FACEBOOK
-</a>
-<div class="note">
-Al tocar el botón podrás agregar los datos de Genaro a tus contactos.
-</div>
+  </a>
 
-<div class="footer">
-Tu identidad digital, en un toque.
-</div>
+  <div class="note">
+    Al tocar el botón podrás agregar los datos de Genaro a tus contactos.
+  </div>
 
-</div>
+  <div class="footer">
+    Tu identidad digital, en un toque.
+  </div>
+
+</main>
 
 </body>
 </html>
