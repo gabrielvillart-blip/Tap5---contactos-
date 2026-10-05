@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Ferretería ADEMIFE | Tap5</title>
 
 <style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
 *{
     box-sizing:border-box;
@@ -19,146 +28,155 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background:#ffffff;
-    color:#111;
+    color:#111111;
 }
 
+
 /* =========================
-   PORTADA
+   PORTADA ADEMIFE
 ========================= */
 
 .hero{
+
     width:100%;
+
     height:100svh;
+
     min-height:100svh;
 
-    background-image:url("ademife-fondo-vertical.png");
+    background-image:
+        url("ademife-fondo-vertical.png");
+
     background-size:cover;
+
     background-position:center center;
+
     background-repeat:no-repeat;
-
-    position:relative;
-}
-
-/* Indicador para deslizar */
-
-.scroll-indicator{
-    position:absolute;
-    bottom:22px;
-    left:50%;
-    transform:translateX(-50%);
-
-    color:white;
-    text-align:center;
-
-    font-size:13px;
-    font-weight:bold;
-
-    text-shadow:0 2px 6px rgba(0,0,0,.8);
-
-    animation:bounce 1.7s infinite;
-}
-
-.scroll-arrow{
-    font-size:30px;
-    line-height:25px;
-    margin-top:4px;
-}
-
-@keyframes bounce{
-
-    0%,20%,50%,80%,100%{
-        transform:translate(-50%,0);
-    }
-
-    40%{
-        transform:translate(-50%,-8px);
-    }
-
-    60%{
-        transform:translate(-50%,-4px);
-    }
 
 }
 
 
 /* =========================
-   INFORMACIÓN
+   SECCIÓN DE INFORMACIÓN
 ========================= */
 
 .contact-section{
 
     background:
-    linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #f4f8ff 100%
-    );
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f4f8ff 100%
+        );
 
-    padding:45px 20px 55px;
+    padding:
+        45px
+        20px
+        55px;
+
 }
 
 
-/* Logo TAP5 */
+/* =========================
+   LOGO TAP5
+========================= */
 
 .tap5-logo{
 
-    width:110px;
-    margin:0 auto 25px;
-    display:block;
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    margin-bottom:28px;
+
+    color:#111111;
+
+}
+
+.tap5-logo span{
+
+    color:#0057d9;
 
 }
 
 
-/* Avatar */
+/* =========================
+   AVATAR
+========================= */
 
 .avatar{
 
     width:92px;
+
     height:92px;
 
-    margin:0 auto 15px;
+    margin:
+        0
+        auto
+        16px;
 
     border-radius:50%;
 
     background:
-    linear-gradient(
-        135deg,
-        #0057d9,
-        #003a91
-    );
+        linear-gradient(
+            135deg,
+            #0057d9,
+            #003a91
+        );
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     color:#ffffff;
 
     font-size:32px;
-    font-weight:bold;
+
+    font-weight:800;
 
     box-shadow:
-    0 8px 25px rgba(0,0,0,.18);
+        0
+        8px
+        25px
+        rgba(0,0,0,.18);
 
 }
 
 
-/* Nombre */
+/* =========================
+   NOMBRE
+========================= */
 
 .name{
 
     text-align:center;
 
     font-size:27px;
+
     font-weight:800;
 
-    margin-bottom:5px;
+    margin-bottom:6px;
+
+    color:#111111;
 
 }
 
 
-/* Empresa */
+/* =========================
+   EMPRESA
+========================= */
 
 .company{
 
@@ -167,7 +185,8 @@ body{
     color:#0057d9;
 
     font-size:17px;
-    font-weight:700;
+
+    font-weight:800;
 
     margin-bottom:30px;
 
@@ -175,28 +194,37 @@ body{
 
 
 /* =========================
-   DATOS
+   CONTENEDOR
 ========================= */
 
 .info{
 
+    width:100%;
+
     max-width:500px;
-    margin:0 auto;
+
+    margin:
+        0
+        auto;
 
 }
 
 
-/* Tarjetas */
+/* =========================
+   TARJETAS DE INFORMACIÓN
+========================= */
 
 .info-card{
 
-    background:white;
+    background:#ffffff;
 
     border-radius:18px;
 
-    padding:17px 18px;
+    padding:
+        17px
+        18px;
 
-    margin-bottom:13px;
+    margin-bottom:14px;
 
     display:flex;
 
@@ -206,12 +234,16 @@ body{
 
     text-decoration:none;
 
-    color:#111;
+    color:#111111;
 
     box-shadow:
-    0 5px 18px rgba(0,0,0,.08);
+        0
+        5px
+        18px
+        rgba(0,0,0,.08);
 
-    transition:.2s;
+    transition:
+        transform .2s ease;
 
 }
 
@@ -223,12 +255,17 @@ body{
 }
 
 
-/* Iconos */
+/* =========================
+   ICONOS
+========================= */
 
 .icon{
 
     width:48px;
+
     height:48px;
+
+    min-width:48px;
 
     border-radius:14px;
 
@@ -239,37 +276,41 @@ body{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     font-size:22px;
 
-    flex-shrink:0;
-
 }
 
 
-/* Texto */
+/* =========================
+   TEXTO DE INFORMACIÓN
+========================= */
 
 .info-text{
 
     display:flex;
+
     flex-direction:column;
 
     gap:4px;
 
 }
 
+
 .info-title{
 
     font-size:12px;
 
-    color:#777;
+    color:#777777;
 
-    font-weight:bold;
+    font-weight:700;
 
     text-transform:uppercase;
 
 }
+
 
 .info-value{
 
@@ -292,11 +333,12 @@ body{
 
     width:100%;
 
-    max-width:500px;
-
-    margin:16px auto 0;
-
     padding:18px;
+
+    margin:
+        16px
+        auto
+        0;
 
     border-radius:16px;
 
@@ -308,39 +350,8 @@ body{
 
     font-weight:800;
 
-    transition:.2s;
-
-}
-
-
-.save-button{
-
-    background:#0057d9;
-
-    color:white;
-
-    box-shadow:
-    0 8px 20px rgba(0,87,217,.25);
-
-}
-
-
-.facebook-button{
-
-    background:#1877f2;
-
-    color:white;
-
-}
-
-
-.location-button{
-
-    background:#ffffff;
-
-    color:#0057d9;
-
-    border:2px solid #0057d9;
+    transition:
+        transform .2s ease;
 
 }
 
@@ -348,6 +359,56 @@ body{
 .button:active{
 
     transform:scale(.98);
+
+}
+
+
+/* =========================
+   GUARDAR CONTACTO
+========================= */
+
+.save-button{
+
+    background:#0057d9;
+
+    color:#ffffff;
+
+    box-shadow:
+        0
+        8px
+        20px
+        rgba(0,87,217,.25);
+
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
+
+.facebook-button{
+
+    background:#1877f2;
+
+    color:#ffffff;
+
+}
+
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.location-button{
+
+    background:#ffffff;
+
+    color:#0057d9;
+
+    border:
+        2px
+        solid
+        #0057d9;
 
 }
 
@@ -362,7 +423,7 @@ body{
 
     padding-top:35px;
 
-    color:#777;
+    color:#777777;
 
     font-size:12px;
 
@@ -383,67 +444,65 @@ body{
 <body>
 
 
-<!-- =========================
+<!-- ==================================================
      PORTADA
-========================= -->
+     La imagen ya contiene:
+     "DESLIZA PARA VER LA INFORMACIÓN"
+================================================== -->
 
-<section class="hero">
-
-    <div class="scroll-indicator">
-
-        DESLIZA PARA VER LA INFORMACIÓN
-
-        <div class="scroll-arrow">
-            ↓
-        </div>
-
-    </div>
-
-</section>
+<section class="hero"></section>
 
 
 
-<!-- =========================
-     INFORMACIÓN
-========================= -->
+<!-- ==================================================
+     INFORMACIÓN DE CONTACTO
+================================================== -->
 
 <section class="contact-section">
 
 
-    <!-- LOGO TAP5 -->
+    <!-- TAP5 -->
 
-    <img
-        src="https://gabrielvillart-blip.github.io/Tap5---contactos-/tap5-logo.png"
-        class="tap5-logo"
-        alt="Tap5"
-    >
+    <div class="tap5-logo">
+
+        Tap<span>5</span>
+
+    </div>
 
 
     <!-- AVATAR -->
 
     <div class="avatar">
+
         AR
+
     </div>
 
 
     <!-- NOMBRE -->
 
     <h1 class="name">
+
         Ana Rivero Blas
+
     </h1>
 
 
     <!-- EMPRESA -->
 
     <div class="company">
+
         FERRETERIA ADEMIFE
+
     </div>
 
 
     <div class="info">
 
 
-        <!-- TELÉFONO -->
+        <!-- ==========================================
+             TELÉFONO
+        =========================================== -->
 
         <a
             class="info-card"
@@ -451,17 +510,25 @@ body{
         >
 
             <div class="icon">
+
                 📞
+
             </div>
+
 
             <div class="info-text">
 
                 <div class="info-title">
+
                     Teléfono
+
                 </div>
 
+
                 <div class="info-value">
+
                     947 318 360
+
                 </div>
 
             </div>
@@ -470,7 +537,9 @@ body{
 
 
 
-        <!-- DIRECCIÓN -->
+        <!-- ==========================================
+             DIRECCIÓN
+        =========================================== -->
 
         <a
             class="info-card"
@@ -480,14 +549,20 @@ body{
         >
 
             <div class="icon">
+
                 📍
+
             </div>
+
 
             <div class="info-text">
 
                 <div class="info-title">
+
                     Dirección
+
                 </div>
+
 
                 <div class="info-value">
 
@@ -502,7 +577,9 @@ body{
 
 
 
-        <!-- GUARDAR CONTACTO -->
+        <!-- ==========================================
+             GUARDAR CONTACTO
+        =========================================== -->
 
         <a
             class="button save-button"
@@ -516,7 +593,9 @@ body{
 
 
 
-        <!-- FACEBOOK -->
+        <!-- ==========================================
+             FACEBOOK
+        =========================================== -->
 
         <a
             class="button facebook-button"
@@ -531,7 +610,9 @@ body{
 
 
 
-        <!-- UBICACIÓN -->
+        <!-- ==========================================
+             GOOGLE MAPS
+        =========================================== -->
 
         <a
             class="button location-button"
@@ -549,7 +630,9 @@ body{
 
 
 
-    <!-- FOOTER -->
+    <!-- ==========================================
+         PIE DE PÁGINA
+    =========================================== -->
 
     <div class="footer">
 
@@ -564,4 +647,5 @@ body{
 
 
 </body>
+
 </html>
