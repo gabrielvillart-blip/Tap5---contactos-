@@ -1,219 +1,748 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dra. Denisse Quiñones | NISHADENT</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>NISHADENT | Dra. Denisse Quiñones</title>
 
 <style>
+
 *{
   box-sizing:border-box;
 }
 
+html{
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
-  background:#f3f4f6;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  padding:0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background:#111;
   color:#111;
 }
 
-.card{
-  max-width:430px;
-  min-height:100vh;
-  margin:auto;
-  background:#fff;
-  padding:22px 22px 28px;
+
+/* =====================================================
+   PORTADA 9:16
+===================================================== */
+
+.hero{
+
+  width:100%;
+
+  min-height:100svh;
+  height:100svh;
+
+  position:relative;
+
+  background-image:
+    url("nishadent-fondo-vertical.png");
+
+  background-size:cover;
+
+  background-position:center center;
+
+  background-repeat:no-repeat;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:center;
+
+  overflow:hidden;
 }
 
-.logo{
-  font-weight:900;
-  font-size:25px;
-  letter-spacing:1.5px;
+
+/* =====================================================
+   DEGRADADO INFERIOR
+===================================================== */
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:30%;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,0.55)
+    );
+
+  pointer-events:none;
+}
+
+
+/* =====================================================
+   INDICADOR
+===================================================== */
+
+.scroll-indicator{
+
+  position:absolute;
+
+  bottom:25px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  z-index:2;
+
+  color:#fff;
+
   text-align:center;
-  margin-bottom:28px;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.9);
+
+  animation:
+    floating 1.8s infinite ease-in-out;
+}
+
+.scroll-arrow{
+
+  display:block;
+
+  margin-top:6px;
+
+  font-size:24px;
+
+  line-height:1;
+}
+
+@keyframes floating{
+
+  0%,
+  100%{
+    transform:translate(-50%,0);
+  }
+
+  50%{
+    transform:translate(-50%,7px);
+  }
+
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contact-section{
+
+  width:100%;
+
+  min-height:100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff8f2 0%,
+      #f9e6d9 100%
+    );
+
+  padding:45px 18px 40px;
+}
+
+.contact-container{
+
+  width:100%;
+
+  max-width:430px;
+
+  margin:auto;
+}
+
+
+/* =====================================================
+   TAP5
+===================================================== */
+
+.logo{
+
+  width:max-content;
+
+  margin:0 auto 25px;
+
+  padding:7px 18px;
+
+  border-radius:30px;
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:21px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.18);
 }
 
 .logo span{
-  font-weight:500;
+  color:#D6A800;
 }
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
 
 .avatar{
-  width:92px;
-  height:92px;
+
+  width:84px;
+  height:84px;
+
+  margin:0 auto 15px;
+
   border-radius:50%;
-  background:#111;
-  color:#fff;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
-  font-size:28px;
-  font-weight:700;
-  margin:0 auto 16px;
+
+  background:#D6A800;
+
+  color:#fff;
+
+  border:3px solid #fff;
+
+  font-size:25px;
+
+  font-weight:800;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.25);
 }
+
+
+/* =====================================================
+   NOMBRE
+===================================================== */
 
 h1{
-  font-size:27px;
-  margin:0 0 6px;
+
+  margin:0 0 5px;
+
   text-align:center;
+
+  color:#222;
+
+  font-size:25px;
+
+  font-weight:800;
 }
+
+
+/* =====================================================
+   EMPRESA
+===================================================== */
 
 .company{
-  font-size:15px;
-  font-weight:600;
-  color:#666;
+
+  margin-bottom:28px;
+
   text-align:center;
-  margin-bottom:24px;
+
+  color:#D6A800;
+
+  font-size:15px;
+
+  font-weight:900;
+
+  letter-spacing:.5px;
 }
 
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
 .info{
+
   width:100%;
+
   display:grid;
+
   gap:11px;
+
   margin-bottom:20px;
 }
 
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
 .item{
+
   display:flex;
+
   align-items:center;
+
   gap:13px;
-  background:#f7f7f7;
+
+  width:100%;
+
+  padding:14px;
+
   border-radius:15px;
-  padding:14px 15px;
-  text-decoration:none;
+
+  background:rgba(255,255,255,0.97);
+
   color:#111;
+
+  text-decoration:none;
+
+  border-left:4px solid #13A8C7;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.14);
+
+  transition:
+    transform .15s ease;
 }
+
+.item:active{
+  transform:scale(.98);
+}
+
+
+/* =====================================================
+   ICONOS
+===================================================== */
 
 .icon{
-  width:34px;
-  height:34px;
-  border-radius:10px;
-  background:#111;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+  width:38px;
+  height:38px;
+
   flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:10px;
+
+  background:#13A8C7;
+
+  color:#fff;
+
   font-size:17px;
+
+  font-weight:800;
 }
 
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
 .text{
+
   font-size:14px;
+
   line-height:1.35;
+
   word-break:break-word;
 }
 
 .label{
+
   display:block;
-  font-size:11px;
-  color:#777;
+
   margin-bottom:2px;
+
+  color:#777;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.4px;
 }
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
 
 .save{
+
   display:block;
+
   width:100%;
-  text-align:center;
-  background:#111;
-  color:#fff;
-  text-decoration:none;
+
+  margin-top:10px;
+
+  padding:15px 10px;
+
   border-radius:13px;
-  padding:14px 10px;
-  font-weight:700;
-  margin-top:9px;
+
+  background:#D6A800;
+
+  color:#fff;
+
+  text-align:center;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:900;
+
+  box-shadow:
+    0 5px 16px rgba(0,0,0,0.20);
+
+  transition:
+    transform .15s ease;
 }
+
+.save:active{
+  transform:scale(.98);
+}
+
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
+
+.facebook{
+  background:#111;
+}
+
+
+/* =====================================================
+   NOTA
+===================================================== */
 
 .note{
-  font-size:11px;
-  color:#888;
+
+  margin-top:13px;
+
+  color:#777;
+
   text-align:center;
+
+  font-size:11px;
+
   line-height:1.4;
-  margin-top:12px;
 }
 
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 .footer{
-  margin-top:30px;
-  padding-top:30px;
-  font-size:11px;
-  color:#aaa;
+
+  margin-top:35px;
+
+  padding-top:20px;
+
+  border-top:
+    1px solid rgba(0,0,0,0.10);
+
+  color:#999;
+
   text-align:center;
+
+  font-size:10px;
+
   letter-spacing:1px;
 }
+
+
+/* =====================================================
+   CELULARES PEQUEÑOS
+===================================================== */
+
+@media(max-width:380px){
+
+  .contact-section{
+    padding:40px 14px 30px;
+  }
+
+  .avatar{
+    width:78px;
+    height:78px;
+    font-size:24px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+  .company{
+    font-size:14px;
+  }
+
+}
+
+
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
+@media(min-width:700px){
+
+  .hero{
+    max-width:600px;
+    margin:auto;
+  }
+
+  .contact-section{
+    max-width:600px;
+    margin:auto;
+  }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<main class="card">
 
-  <div class="logo">TAP<span>5</span></div>
+<!-- ==================================================
+     PORTADA
+================================================== -->
 
-  <div class="avatar">DQ</div>
+<section class="hero">
 
-  <h1>Dra. Denisse Quiñones</h1>
+  <div class="scroll-indicator">
 
-  <div class="company">NISHADENT</div>
+    DESLIZA PARA VER LA INFORMACIÓN
 
-  <section class="info">
+    <span class="scroll-arrow">
+      ↓
+    </span>
 
-    <!-- TELÉFONO -->
-    <a class="item" href="tel:+51994827954">
-      <div class="icon">☎</div>
-      <div class="text">
-        <span class="label">TELÉFONO</span>
-        994 827 954
-      </div>
-    </a>
+  </div>
 
-    <!-- CORREO -->
-    <a class="item" href="mailto:Dequiri@hotmail.com">
-      <div class="icon">✉</div>
-      <div class="text">
-        <span class="label">CORREO</span>
-        Dequiri@hotmail.com
-      </div>
-    </a>
+</section>
 
-    <!-- DIRECCIÓN - GOOGLE MAPS NISHADENT -->
+
+
+<!-- ==================================================
+     INFORMACIÓN
+================================================== -->
+
+<section class="contact-section">
+
+  <div class="contact-container">
+
+
+    <!-- TAP5 -->
+
+    <div class="logo">
+
+      TAP<span>5</span>
+
+    </div>
+
+
+    <!-- AVATAR -->
+
+    <div class="avatar">
+
+      DQ
+
+    </div>
+
+
+    <!-- NOMBRE -->
+
+    <h1>
+
+      Dra. Denisse Quiñones
+
+    </h1>
+
+
+    <!-- EMPRESA -->
+
+    <div class="company">
+
+      NISHADENT
+
+    </div>
+
+
+    <!-- DATOS -->
+
+    <section class="info">
+
+
+      <!-- TELÉFONO -->
+
+      <a
+        class="item"
+        href="tel:+51994827954"
+      >
+
+        <div class="icon">
+          ☎
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            TELÉFONO
+          </span>
+
+          994 827 954
+
+        </div>
+
+      </a>
+
+
+      <!-- CORREO -->
+
+      <a
+        class="item"
+        href="mailto:Dequiri@hotmail.com"
+      >
+
+        <div class="icon">
+          ✉
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            CORREO
+          </span>
+
+          Dequiri@hotmail.com
+
+        </div>
+
+      </a>
+
+
+      <!-- DIRECCIÓN -->
+
+      <a
+        class="item"
+        href="https://maps.app.goo.gl/ZVz6K133XEcT29Jd7"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <div class="icon">
+          ⌖
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            DIRECCIÓN
+          </span>
+
+          Av. Zaragoza MZ. F Lote 2, Lima, Perú, 15307
+
+        </div>
+
+      </a>
+
+
+    </section>
+
+
+    <!-- GUARDAR CONTACTO -->
+
     <a
-      class="item"
-      href="https://maps.app.goo.gl/e4e1evn5Zijm7HBk6"
+      class="save"
+      href="contact.vcf"
+    >
+
+      GUARDAR CONTACTO
+
+    </a>
+
+
+    <!-- FACEBOOK -->
+
+    <a
+      class="save facebook"
+      href="https://www.facebook.com/profile.php?id=100042064522523&locale=es_LA"
       target="_blank"
       rel="noopener"
     >
-      <div class="icon">⌂</div>
-      <div class="text">
-        <span class="label">DIRECCIÓN</span>
-        Av. Zaragoza MZ. F Lote 2, Lima, Perú, 15307
-      </div>
+
+      📘 VISITAR FACEBOOK
+
     </a>
 
-  </section>
 
-  <!-- GUARDAR CONTACTO -->
-  <a class="save" href="contact.vcf">
-    GUARDAR CONTACTO
-  </a>
+    <!-- NOTA -->
 
-  <!-- FACEBOOK -->
-  <a
-    class="save"
-    href="https://www.facebook.com/profile.php?id=100042064522523&locale=es_LA"
-    target="_blank"
-    rel="noopener"
-  >
-    📘 VISITAR FACEBOOK
-  </a>
+    <div class="note">
 
-  <div class="note">
-    Al tocar el botón podrás agregar los datos de la Dra. Denisse a tus contactos.
+      Al tocar el botón podrás agregar los datos de la Dra. Denisse a tus contactos.
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+      Tu identidad digital, en un toque.
+
+    </div>
+
+
   </div>
 
-  <div class="footer">
-    Tu identidad digital, en un toque.
-  </div>
+</section>
 
-</main>
 
 </body>
+
 </html>
