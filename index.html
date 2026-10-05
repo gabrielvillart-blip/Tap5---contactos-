@@ -7,6 +7,7 @@
 <title>Abel Villar | CARROCERÍAS FACANI</title>
 
 <style>
+
 *{
   box-sizing:border-box;
 }
@@ -20,23 +21,26 @@ body{
   min-height:100vh;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   color:#111;
-  background:#111;
   position:relative;
+  background:#111;
 }
 
-/* FOTO DE FONDO */
+/* =========================
+   FONDO FACANI
+========================= */
+
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background-image:url("facani-fondo.jpg");
+  background-image:url("facani-web-fondo.jpg");
   background-size:cover;
-  background-position:center;
+  background-position:center center;
   background-repeat:no-repeat;
   z-index:-2;
 }
 
-/* CAPA OSCURA + ROJA */
+/* Capa de contraste */
 body::after{
   content:"";
   position:fixed;
@@ -44,14 +48,17 @@ body::after{
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.72) 0%,
-      rgba(0,0,0,0.52) 35%,
-      rgba(237,28,36,0.45) 100%
+      rgba(0,0,0,0.35) 0%,
+      rgba(0,0,0,0.18) 35%,
+      rgba(0,0,0,0.62) 100%
     );
   z-index:-1;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
 .card{
   width:100%;
   max-width:430px;
@@ -60,159 +67,290 @@ body::after{
   padding:24px 20px 30px;
 }
 
-/* LOGO TAP5 */
+/* =========================
+   TAP5
+========================= */
+
 .logo{
-  text-align:center;
+  width:max-content;
+  margin:0 auto 22px;
+  padding:7px 18px;
+  border-radius:30px;
+  background:rgba(0,0,0,0.78);
   color:#fff;
+  font-size:23px;
   font-weight:900;
-  font-size:25px;
   letter-spacing:2px;
-  margin-bottom:24px;
-  text-shadow:0 2px 8px rgba(0,0,0,0.45);
+  box-shadow:0 5px 18px rgba(0,0,0,0.35);
 }
 
 .logo span{
-  font-weight:500;
+  color:#ED1C24;
 }
 
-/* AVATAR */
+/* =========================
+   AVATAR
+========================= */
+
 .avatar{
-  width:92px;
-  height:92px;
+  width:88px;
+  height:88px;
   border-radius:50%;
   background:#111;
   color:#fff;
+  border:3px solid #fff;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
-  font-weight:700;
-  margin:0 auto 16px;
-  border:3px solid #fff;
-  box-shadow:0 5px 20px rgba(0,0,0,0.35);
-}
 
-/* NOMBRE */
-h1{
+  margin:0 auto 14px;
+
   font-size:27px;
-  margin:0 0 6px;
-  text-align:center;
-  color:#fff;
-  text-shadow:0 2px 8px rgba(0,0,0,0.5);
-}
-
-/* EMPRESA */
-.company{
-  font-size:15px;
   font-weight:800;
-  color:#fff;
-  text-align:center;
-  margin-bottom:24px;
-  letter-spacing:.4px;
-  text-shadow:0 2px 8px rgba(0,0,0,0.5);
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.45);
 }
 
-/* INFORMACIÓN */
+/* =========================
+   NOMBRE
+========================= */
+
+h1{
+  margin:0 0 5px;
+  text-align:center;
+
+  color:#fff;
+
+  font-size:26px;
+  font-weight:800;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.75);
+}
+
+/* =========================
+   EMPRESA
+========================= */
+
+.company{
+  margin-bottom:23px;
+
+  text-align:center;
+
+  color:#ED1C24;
+
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.5px;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
 .info{
   width:100%;
   display:grid;
   gap:11px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
-/* CADA OPCIÓN */
+/* =========================
+   OPCIONES
+========================= */
+
 .item{
   display:flex;
   align-items:center;
+
   gap:13px;
-  background:rgba(255,255,255,0.94);
+
+  width:100%;
+
+  padding:13px 14px;
+
   border-radius:15px;
-  padding:14px 15px;
-  text-decoration:none;
+
+  background:rgba(255,255,255,0.94);
+
   color:#111;
-  box-shadow:0 5px 18px rgba(0,0,0,0.18);
-  transition:transform .15s ease, background .15s ease;
+  text-decoration:none;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.28);
+
+  border-left:4px solid #ED1C24;
+
+  transition:
+    transform .15s ease,
+    background .15s ease;
 }
 
 .item:active{
   transform:scale(.98);
 }
 
-/* ICONOS */
+/* =========================
+   ICONOS
+========================= */
+
 .icon{
-  width:36px;
-  height:36px;
-  border-radius:10px;
-  background:#ED1C24;
-  color:#fff;
+  width:37px;
+  height:37px;
+
+  flex-shrink:0;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  flex-shrink:0;
+
+  border-radius:10px;
+
+  background:#ED1C24;
+
+  color:#fff;
+
   font-size:17px;
-  font-weight:700;
+  font-weight:800;
 }
 
-/* TEXTO */
+/* =========================
+   TEXTO
+========================= */
+
 .text{
   font-size:14px;
   line-height:1.35;
+
   word-break:break-word;
 }
 
 .label{
   display:block;
-  font-size:11px;
-  color:#777;
+
   margin-bottom:2px;
-  font-weight:600;
+
+  color:#777;
+
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.3px;
 }
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
+
 .save{
   display:block;
+
   width:100%;
-  text-align:center;
-  background:#ED1C24;
-  color:#fff;
-  text-decoration:none;
-  border-radius:13px;
-  padding:14px 10px;
-  font-weight:800;
+
   margin-top:9px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.25);
-  transition:transform .15s ease, background .15s ease;
+
+  padding:14px 10px;
+
+  border-radius:13px;
+
+  background:#ED1C24;
+
+  color:#fff;
+
+  text-align:center;
+  text-decoration:none;
+
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.2px;
+
+  box-shadow:
+    0 5px 16px rgba(0,0,0,0.35);
+
+  transition:
+    transform .15s ease,
+    filter .15s ease;
 }
 
 .save:active{
   transform:scale(.98);
 }
 
-/* FACEBOOK */
+/* =========================
+   FACEBOOK
+========================= */
+
 .facebook{
   background:#111;
 }
 
-/* NOTA */
+/* =========================
+   NOTA
+========================= */
+
 .note{
-  font-size:11px;
-  color:#fff;
-  text-align:center;
-  line-height:1.4;
   margin-top:12px;
-  text-shadow:0 2px 6px rgba(0,0,0,0.6);
+
+  color:#fff;
+
+  text-align:center;
+
+  font-size:11px;
+  line-height:1.4;
+
+  text-shadow:
+    0 2px 7px rgba(0,0,0,0.8);
 }
 
-/* PIE */
+/* =========================
+   FOOTER
+========================= */
+
 .footer{
   margin-top:30px;
-  padding-top:25px;
-  font-size:11px;
-  color:rgba(255,255,255,0.75);
+  padding-top:20px;
+
+  color:rgba(255,255,255,0.85);
+
   text-align:center;
+
+  font-size:11px;
   letter-spacing:1px;
-  text-shadow:0 2px 6px rgba(0,0,0,0.6);
+
+  text-shadow:
+    0 2px 7px rgba(0,0,0,0.8);
 }
+
+/* =========================
+   AJUSTES PARA CELULARES
+========================= */
+
+@media(max-width:430px){
+
+  .card{
+    padding:20px 16px 28px;
+  }
+
+  .logo{
+    font-size:21px;
+    margin-bottom:20px;
+  }
+
+  .avatar{
+    width:82px;
+    height:82px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+}
+
 </style>
 </head>
 
@@ -230,7 +368,8 @@ h1{
     AV
   </div>
 
-  <!-- DATOS -->
+  <!-- DATOS DEL CONTACTO -->
+
   <h1>Abel Villar</h1>
 
   <div class="company">
@@ -240,31 +379,42 @@ h1{
   <section class="info">
 
     <!-- TELÉFONO -->
-    <a class="item" href="tel:+51936927678">
+    <a
+      class="item"
+      href="tel:+51936927678"
+    >
       <div class="icon">☎</div>
+
       <div class="text">
         <span class="label">TELÉFONO</span>
         936 927 678
       </div>
     </a>
 
+
     <!-- CORREO -->
-    <a class="item" href="mailto:ventas@carroceriasfacani.com.pe">
+    <a
+      class="item"
+      href="mailto:ventas@carroceriasfacani.com.pe"
+    >
       <div class="icon">✉</div>
+
       <div class="text">
         <span class="label">CORREO</span>
         ventas@carroceriasfacani.com.pe
       </div>
     </a>
 
-    <!-- DIRECCIÓN -->
+
+    <!-- GOOGLE MAPS -->
     <a
       class="item"
-      href="https://www.google.com/maps/place/Carrocerias+Facani/@-11.9000814,-77.0665443,17z/data=!3m1!4b1!4m6!3m5!1s0x9105d1c82c528ebd:0x2db391e846e5141b!8m2!3d-11.9000814!4d-77.063964!16s%2Fg%2F11j8w05qzs"
+      href="https://maps.app.goo.gl/9MLLbfThGcEvUQiXA"
       target="_blank"
       rel="noopener"
     >
-      <div class="icon">⌂</div>
+      <div class="icon">⌖</div>
+
       <div class="text">
         <span class="label">DIRECCIÓN</span>
         Jr. Ancash Mz. F Lt. 1B Asoc. Huerta San Pedro - Puente Piedra
@@ -273,12 +423,17 @@ h1{
 
   </section>
 
+
   <!-- GUARDAR CONTACTO -->
-  <a class="save" href="contact.vcf">
+  <a
+    class="save"
+    href="contact.vcf"
+  >
     GUARDAR CONTACTO
   </a>
 
-  <!-- FACEBOOK NUEVO -->
+
+  <!-- FACEBOOK -->
   <a
     class="save facebook"
     href="https://www.facebook.com/share/1Bxro8hv1L/?mibextid=wwXIfr"
@@ -288,10 +443,12 @@ h1{
     📘 VISITAR FACEBOOK
   </a>
 
+
   <!-- NOTA -->
   <div class="note">
     Al tocar el botón podrás agregar los datos de Abel a tus contactos.
   </div>
+
 
   <!-- PIE -->
   <div class="footer">
