@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>CARROCERÍAS FACANI | Abel Villar</title>
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  padding:0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background:#111;
+  color:#111;
+}
+
+
+/* =====================================================
+   PRIMERA PANTALLA
+   FONDO FACANI 9:16
+===================================================== */
+
+.hero{
+
+  width:100%;
+
+  min-height:100svh;
+  height:100svh;
+
+  position:relative;
+
+  background-image:
+    url("facani-web-fondo-vertical.jpg");
+
+  background-size:cover;
+
+  background-position:center center;
+
+  background-repeat:no-repeat;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+
+/* =====================================================
+   DEGRADADO INFERIOR
+   AYUDA A QUE EL INDICADOR SE VEA
+===================================================== */
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:30%;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,0.65)
+    );
+
+  pointer-events:none;
+}
+
+
+/* =====================================================
+   INDICADOR DE SCROLL
+===================================================== */
+
+.scroll-indicator{
+
+  position:absolute;
+
+  bottom:25px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  z-index:2;
+
+  color:#fff;
+
+  text-align:center;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.9);
+
+  animation:
+    floating 1.8s infinite ease-in-out;
+}
+
+
+.scroll-arrow{
+
+  display:block;
+
+  margin-top:6px;
+
+  font-size:24px;
+
+  line-height:1;
+}
+
+
+@keyframes floating{
+
+  0%,
+  100%{
+    transform:translate(-50%,0);
+  }
+
+  50%{
+    transform:translate(-50%,7px);
+  }
+
+}
+
+
+/* =====================================================
+   SECCIÓN DE INFORMACIÓN
+===================================================== */
+
+.contact-section{
+
+  width:100%;
+
+  min-height:100vh;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #111 0%,
+      #181818 100%
+    );
+
+  padding:45px 18px 40px;
+}
+
+
+.contact-container{
+
+  width:100%;
+
+  max-width:430px;
+
+  margin:auto;
+}
+
+
+/* =====================================================
+   IDENTIDAD TAP5
+===================================================== */
+
+.logo{
+
+  width:max-content;
+
+  margin:0 auto 25px;
+
+  padding:7px 18px;
+
+  border-radius:30px;
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:21px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.35);
+}
+
+
+.logo span{
+  color:#ED1C24;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.avatar{
+
+  width:84px;
+  height:84px;
+
+  margin:0 auto 15px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#ED1C24;
+
+  color:#fff;
+
+  border:3px solid #fff;
+
+  font-size:26px;
+
+  font-weight:800;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.5);
+}
+
+
+/* =====================================================
+   NOMBRE
+===================================================== */
+
+h1{
+
+  margin:0 0 5px;
+
+  text-align:center;
+
+  color:#fff;
+
+  font-size:26px;
+
+  font-weight:800;
+}
+
+
+/* =====================================================
+   EMPRESA
+===================================================== */
+
+.company{
+
+  margin-bottom:28px;
+
+  text-align:center;
+
+  color:#ED1C24;
+
+  font-size:15px;
+
+  font-weight:900;
+
+  letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.info{
+
+  width:100%;
+
+  display:grid;
+
+  gap:11px;
+
+  margin-bottom:20px;
+}
+
+
+/* =====================================================
+   TARJETAS DE INFORMACIÓN
+===================================================== */
+
+.item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+
+  width:100%;
+
+  padding:14px;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,0.96);
+
+  color:#111;
+
+  text-decoration:none;
+
+  border-left:4px solid #ED1C24;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,0.35);
+
+  transition:
+    transform .15s ease;
+}
+
+
+.item:active{
+
+  transform:scale(.98);
+
+}
+
+
+/* =====================================================
+   ICONOS
+===================================================== */
+
+.icon{
+
+  width:38px;
+  height:38px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:10px;
+
+  background:#ED1C24;
+
+  color:#fff;
+
+  font-size:17px;
+
+  font-weight:800;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.text{
+
+  font-size:14px;
+
+  line-height:1.35;
+
+  word-break:break-word;
+}
+
+
+.label{
+
+  display:block;
+
+  margin-bottom:2px;
+
+  color:#777;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.4px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.save{
+
+  display:block;
+
+  width:100%;
+
+  margin-top:10px;
+
+  padding:15px 10px;
+
+  border-radius:13px;
+
+  background:#ED1C24;
+
+  color:#fff;
+
+  text-align:center;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:900;
+
+  box-shadow:
+    0 5px 16px rgba(0,0,0,0.4);
+
+  transition:
+    transform .15s ease;
+}
+
+
+.save:active{
+
+  transform:scale(.98);
+
+}
+
+
+/* =====================================================
+   FACEBOOK
+===================================================== */
+
+.facebook{
+
+  background:#fff;
+
+  color:#111;
+}
+
+
+/* =====================================================
+   NOTA
+===================================================== */
+
+.note{
+
+  margin-top:13px;
+
+  color:#aaa;
+
+  text-align:center;
+
+  font-size:11px;
+
+  line-height:1.4;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+  margin-top:35px;
+
+  padding-top:20px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.12);
+
+  color:#777;
+
+  text-align:center;
+
+  font-size:10px;
+
+  letter-spacing:1px;
+}
+
+
+/* =====================================================
+   CELULARES PEQUEÑOS
+===================================================== */
+
+@media(max-width:380px){
+
+  .contact-section{
+
+    padding:
+      40px 14px 30px;
+  }
+
+  .avatar{
+
+    width:78px;
+    height:78px;
+
+    font-size:24px;
+  }
+
+  h1{
+
+    font-size:24px;
+  }
+
+  .company{
+
+    font-size:14px;
+  }
+
+}
+
+
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
+@media(min-width:700px){
+
+  .hero{
+
+    max-width:600px;
+
+    margin:auto;
+  }
+
+  .contact-section{
+
+    max-width:600px;
+
+    margin:auto;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     PRIMERA PANTALLA
+================================================== -->
+
+<section class="hero">
+
+  <div class="scroll-indicator">
+
+    DESLIZA PARA VER LA INFORMACIÓN
+
+    <span class="scroll-arrow">
+      ↓
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     INFORMACIÓN DE CONTACTO
+================================================== -->
+
+<section class="contact-section">
+
+  <div class="contact-container">
+
+
+    <!-- TAP5 -->
+
+    <div class="logo">
+
+      TAP<span>5</span>
+
+    </div>
+
+
+    <!-- AVATAR -->
+
+    <div class="avatar">
+
+      AV
+
+    </div>
+
+
+    <!-- NOMBRE -->
+
+    <h1>
+
+      Abel Villar
+
+    </h1>
+
+
+    <!-- EMPRESA -->
+
+    <div class="company">
+
+      CARROCERÍAS FACANI
+
+    </div>
+
+
+    <!-- DATOS -->
+
+    <section class="info">
+
+
+      <!-- TELÉFONO -->
+
+      <a
+        class="item"
+        href="tel:+51936927678"
+      >
+
+        <div class="icon">
+          ☎
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            TELÉFONO
+          </span>
+
+          936 927 678
+
+        </div>
+
+      </a>
+
+
+      <!-- CORREO -->
+
+      <a
+        class="item"
+        href="mailto:ventas@carroceriasfacani.com.pe"
+      >
+
+        <div class="icon">
+          ✉
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            CORREO
+          </span>
+
+          ventas@carroceriasfacani.com.pe
+
+        </div>
+
+      </a>
+
+
+      <!-- GOOGLE MAPS -->
+
+      <a
+        class="item"
+        href="https://maps.app.goo.gl/9MLLbfThGcEvUQiXA"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <div class="icon">
+          ⌖
+        </div>
+
+        <div class="text">
+
+          <span class="label">
+            DIRECCIÓN
+          </span>
+
+          Jr. Ancash Mz. F Lt. 1B Asoc. Huerta San Pedro - Puente Piedra
+
+        </div>
+
+      </a>
+
+
+    </section>
+
+
+    <!-- GUARDAR CONTACTO -->
+
+    <a
+      class="save"
+      href="contact.vcf"
+    >
+
+      GUARDAR CONTACTO
+
+    </a>
+
+
+    <!-- FACEBOOK -->
+
+    <a
+      class="save facebook"
+      href="https://www.facebook.com/share/1Bxro8hv1L/?mibextid=wwXIfr"
+      target="_blank"
+      rel="noopener"
+    >
+
+      📘 VISITAR FACEBOOK
+
+    </a>
+
+
+    <!-- NOTA -->
+
+    <div class="note">
+
+      Al tocar el botón podrás agregar los datos de Abel a tus contactos.
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+      Tu identidad digital, en un toque.
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</body>
+
+</html>
