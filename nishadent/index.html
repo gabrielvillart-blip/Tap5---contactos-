@@ -1,748 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>NISHADENT | Dra. Denisse Quiñones</title>
-
-<style>
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  margin:0;
-  padding:0;
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  padding:0;
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
-
-  background:#111;
-  color:#111;
-}
-
-
-/* =====================================================
-   PORTADA 9:16
-===================================================== */
-
-.hero{
-
-  width:100%;
-
-  min-height:100svh;
-  height:100svh;
-
-  position:relative;
-
-  background-image:
-    url("nishadent-fondo-vertical.png");
-
-  background-size:cover;
-
-  background-position:center center;
-
-  background-repeat:no-repeat;
-
-  display:flex;
-
-  align-items:flex-end;
-
-  justify-content:center;
-
-  overflow:hidden;
-}
-
-
-/* =====================================================
-   DEGRADADO INFERIOR
-===================================================== */
-
-.hero::after{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  right:0;
-  bottom:0;
-
-  height:30%;
-
-  background:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,0.55)
-    );
-
-  pointer-events:none;
-}
-
-
-/* =====================================================
-   INDICADOR
-===================================================== */
-
-.scroll-indicator{
-
-  position:absolute;
-
-  bottom:25px;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  z-index:2;
-
-  color:#fff;
-
-  text-align:center;
-
-  font-size:11px;
-
-  font-weight:700;
-
-  letter-spacing:1px;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.9);
-
-  animation:
-    floating 1.8s infinite ease-in-out;
-}
-
-.scroll-arrow{
-
-  display:block;
-
-  margin-top:6px;
-
-  font-size:24px;
-
-  line-height:1;
-}
-
-@keyframes floating{
-
-  0%,
-  100%{
-    transform:translate(-50%,0);
-  }
-
-  50%{
-    transform:translate(-50%,7px);
-  }
-
-}
-
-
-/* =====================================================
-   CONTACTO
-===================================================== */
-
-.contact-section{
-
-  width:100%;
-
-  min-height:100vh;
-
-  background:
-    linear-gradient(
-      180deg,
-      #fff8f2 0%,
-      #f9e6d9 100%
-    );
-
-  padding:45px 18px 40px;
-}
-
-.contact-container{
-
-  width:100%;
-
-  max-width:430px;
-
-  margin:auto;
-}
-
-
-/* =====================================================
-   TAP5
-===================================================== */
-
-.logo{
-
-  width:max-content;
-
-  margin:0 auto 25px;
-
-  padding:7px 18px;
-
-  border-radius:30px;
-
-  background:#fff;
-
-  color:#111;
-
-  font-size:21px;
-
-  font-weight:900;
-
-  letter-spacing:2px;
-
-  box-shadow:
-    0 5px 18px rgba(0,0,0,0.18);
-}
-
-.logo span{
-  color:#D6A800;
-}
-
-
-/* =====================================================
-   AVATAR
-===================================================== */
-
-.avatar{
-
-  width:84px;
-  height:84px;
-
-  margin:0 auto 15px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:#D6A800;
-
-  color:#fff;
-
-  border:3px solid #fff;
-
-  font-size:25px;
-
-  font-weight:800;
-
-  box-shadow:
-    0 5px 20px rgba(0,0,0,0.25);
-}
-
-
-/* =====================================================
-   NOMBRE
-===================================================== */
-
-h1{
-
-  margin:0 0 5px;
-
-  text-align:center;
-
-  color:#222;
-
-  font-size:25px;
-
-  font-weight:800;
-}
-
-
-/* =====================================================
-   EMPRESA
-===================================================== */
-
-.company{
-
-  margin-bottom:28px;
-
-  text-align:center;
-
-  color:#D6A800;
-
-  font-size:15px;
-
-  font-weight:900;
-
-  letter-spacing:.5px;
-}
-
-
-/* =====================================================
-   INFORMACIÓN
-===================================================== */
-
-.info{
-
-  width:100%;
-
-  display:grid;
-
-  gap:11px;
-
-  margin-bottom:20px;
-}
-
-
-/* =====================================================
-   TARJETAS
-===================================================== */
-
-.item{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:13px;
-
-  width:100%;
-
-  padding:14px;
-
-  border-radius:15px;
-
-  background:rgba(255,255,255,0.97);
-
-  color:#111;
-
-  text-decoration:none;
-
-  border-left:4px solid #13A8C7;
-
-  box-shadow:
-    0 5px 18px rgba(0,0,0,0.14);
-
-  transition:
-    transform .15s ease;
-}
-
-.item:active{
-  transform:scale(.98);
-}
-
-
-/* =====================================================
-   ICONOS
-===================================================== */
-
-.icon{
-
-  width:38px;
-  height:38px;
-
-  flex-shrink:0;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border-radius:10px;
-
-  background:#13A8C7;
-
-  color:#fff;
-
-  font-size:17px;
-
-  font-weight:800;
-}
-
-
-/* =====================================================
-   TEXTO
-===================================================== */
-
-.text{
-
-  font-size:14px;
-
-  line-height:1.35;
-
-  word-break:break-word;
-}
-
-.label{
-
-  display:block;
-
-  margin-bottom:2px;
-
-  color:#777;
-
-  font-size:10px;
-
-  font-weight:700;
-
-  letter-spacing:.4px;
-}
-
-
-/* =====================================================
-   BOTONES
-===================================================== */
-
-.save{
-
-  display:block;
-
-  width:100%;
-
-  margin-top:10px;
-
-  padding:15px 10px;
-
-  border-radius:13px;
-
-  background:#D6A800;
-
-  color:#fff;
-
-  text-align:center;
-
-  text-decoration:none;
-
-  font-size:14px;
-
-  font-weight:900;
-
-  box-shadow:
-    0 5px 16px rgba(0,0,0,0.20);
-
-  transition:
-    transform .15s ease;
-}
-
-.save:active{
-  transform:scale(.98);
-}
-
-
-/* =====================================================
-   FACEBOOK
-===================================================== */
-
-.facebook{
-  background:#111;
-}
-
-
-/* =====================================================
-   NOTA
-===================================================== */
-
-.note{
-
-  margin-top:13px;
-
-  color:#777;
-
-  text-align:center;
-
-  font-size:11px;
-
-  line-height:1.4;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer{
-
-  margin-top:35px;
-
-  padding-top:20px;
-
-  border-top:
-    1px solid rgba(0,0,0,0.10);
-
-  color:#999;
-
-  text-align:center;
-
-  font-size:10px;
-
-  letter-spacing:1px;
-}
-
-
-/* =====================================================
-   CELULARES PEQUEÑOS
-===================================================== */
-
-@media(max-width:380px){
-
-  .contact-section{
-    padding:40px 14px 30px;
-  }
-
-  .avatar{
-    width:78px;
-    height:78px;
-    font-size:24px;
-  }
-
-  h1{
-    font-size:24px;
-  }
-
-  .company{
-    font-size:14px;
-  }
-
-}
-
-
-/* =====================================================
-   PANTALLAS GRANDES
-===================================================== */
-
-@media(min-width:700px){
-
-  .hero{
-    max-width:600px;
-    margin:auto;
-  }
-
-  .contact-section{
-    max-width:600px;
-    margin:auto;
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101114">
+  <title>NISHADENT | Dra. Denisse Quiñones</title>
+  <style>
+    :root { --accent:#D6A800; --bg:#101114; }
+    * { box-sizing:border-box; }
+    html { margin:0; padding:0; scroll-behavior:smooth; }
+    body {
+      margin:0; padding:0; color:#fff; background:var(--bg);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .hero {
+      width:100%; height:100svh; min-height:620px; position:relative;
+      background-image:url("nishadent-fondo-vertical.png");
+      background-size:cover; background-position:center; background-repeat:no-repeat;
+      display:flex; align-items:flex-end; justify-content:center; overflow:hidden;
+    }
+    .hero::after {
+      content:""; position:absolute; inset:55% 0 0;
+      background:linear-gradient(transparent,rgba(0,0,0,.65)); pointer-events:none;
+    }
+    .scroll-indicator {
+      position:absolute; z-index:1; bottom:25px; left:50%; transform:translateX(-50%);
+      color:#fff; text-align:center; font-size:11px; font-weight:800;
+      letter-spacing:1px; text-shadow:0 2px 8px #000; white-space:nowrap;
+      animation:float 1.8s infinite ease-in-out;
+    }
+    .scroll-arrow { display:block; margin-top:6px; font-size:25px; line-height:1; }
+    @keyframes float { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,7px)} }
+    .contact-section {
+      min-height:100vh; padding:42px 18px 38px;
+      background:linear-gradient(180deg,#101114 0%,#191b21 100%);
+    }
+    .contact-container { width:100%; max-width:430px; margin:0 auto; }
+    .logo {
+      width:max-content; margin:0 auto 23px; padding:7px 18px; border-radius:30px;
+      background:#fff; color:#111; font-size:21px; font-weight:950; letter-spacing:2px;
+      box-shadow:0 5px 18px rgba(0,0,0,.35);
+    }
+    .logo span { color:var(--accent); }
+    .avatar {
+      width:84px; height:84px; margin:0 auto 14px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center; background:var(--accent);
+      color:#fff; border:3px solid #fff; font-size:26px; font-weight:850;
+      box-shadow:0 5px 20px rgba(0,0,0,.5);
+    }
+    h1 { margin:0 0 6px; text-align:center; color:#fff; font-size:26px; font-weight:850; }
+    .company {
+      margin-bottom:18px; text-align:center; color:var(--accent); font-size:14px;
+      line-height:1.4; font-weight:900; letter-spacing:.5px;
+    }
+    .socials { display:flex; justify-content:center; gap:14px; margin:0 auto 25px; }
+    .social {
+      width:48px; height:48px; border-radius:50%; display:flex; align-items:center;
+      justify-content:center; text-decoration:none; box-shadow:0 5px 15px #0006;
+      transition:transform .15s ease;
+    }
+    .social:active { transform:scale(.94); }
+    .social svg { width:25px; height:25px; display:block; }
+    .whatsapp { background:#25D366; color:white; }
+    .facebook { background:#1877F2; color:white; }
+    .info { display:grid; gap:11px; margin-bottom:18px; }
+    .item {
+      display:flex; align-items:center; gap:13px; width:100%; padding:14px;
+      border-radius:15px; background:rgba(255,255,255,.97); color:#111;
+      text-decoration:none; border-left:4px solid var(--accent);
+      box-shadow:0 5px 18px rgba(0,0,0,.32); transition:transform .15s ease;
+    }
+    .item:active { transform:scale(.985); }
+    .icon {
+      width:38px; height:38px; flex-shrink:0; display:flex; align-items:center;
+      justify-content:center; border-radius:10px; background:var(--accent);
+      color:#fff; font-size:19px; font-weight:800;
+    }
+    .text { font-size:14px; line-height:1.4; overflow-wrap:anywhere; }
+    .label {
+      display:block; margin-bottom:2px; color:#777; font-size:10px;
+      font-weight:800; letter-spacing:.5px;
+    }
+    .action {
+      display:block; width:100%; margin-top:10px; padding:15px 12px;
+      border-radius:13px; background:var(--accent); color:#171717; text-align:center;
+      text-decoration:none; font-size:14px; font-weight:900;
+      box-shadow:0 5px 16px rgba(0,0,0,.4); transition:transform .15s ease;
+    }
+    .action:active { transform:scale(.985); }
+    .call { background:#20242d; color:#fff; border:1px solid #343a47; }
+    .note { margin-top:13px; color:#aaa; text-align:center; font-size:11px; line-height:1.5; }
+    .footer {
+      margin-top:30px; padding-top:19px; border-top:1px solid #ffffff1f;
+      color:#888; text-align:center; font-size:10px; letter-spacing:.8px;
+    }
+    .footer strong { color:#bbb; }
+    @media(max-width:380px) {
+      .contact-section { padding:38px 14px 30px; }
+      .avatar { width:78px; height:78px; font-size:24px; }
+      h1 { font-size:24px; }
+      .company { font-size:13px; }
+      .hero { min-height:560px; }
+    }
+  </style>
 </head>
-
-
 <body>
-
-
-<!-- ==================================================
-     PORTADA
-================================================== -->
-
-<section class="hero">
-
-  <div class="scroll-indicator">
-
-    DESLIZA PARA VER LA INFORMACIÓN
-
-    <span class="scroll-arrow">
-      ↓
-    </span>
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     INFORMACIÓN
-================================================== -->
-
-<section class="contact-section">
-
-  <div class="contact-container">
-
-
-    <!-- TAP5 -->
-
-    <div class="logo">
-
-      TAP<span>5</span>
-
+  <section class="hero" aria-label="Portada de Nishadent">
+    <div class="scroll-indicator">
+      DESLIZA PARA VER LOS DATOS
+      <span class="scroll-arrow">↓</span>
     </div>
-
-
-    <!-- AVATAR -->
-
-    <div class="avatar">
-
-      DQ
-
-    </div>
-
-
-    <!-- NOMBRE -->
-
-    <h1>
-
-      Dra. Denisse Quiñones
-
-    </h1>
-
-
-    <!-- EMPRESA -->
-
-    <div class="company">
-
-      NISHADENT
-
-    </div>
-
-
-    <!-- DATOS -->
-
-    <section class="info">
-
-
-      <!-- TELÉFONO -->
-
-      <a
-        class="item"
-        href="tel:+51994827954"
-      >
-
-        <div class="icon">
-          ☎
-        </div>
-
-        <div class="text">
-
-          <span class="label">
-            TELÉFONO
-          </span>
-
-          994 827 954
-
-        </div>
-
-      </a>
-
-
-      <!-- CORREO -->
-
-      <a
-        class="item"
-        href="mailto:Dequiri@hotmail.com"
-      >
-
-        <div class="icon">
-          ✉
-        </div>
-
-        <div class="text">
-
-          <span class="label">
-            CORREO
-          </span>
-
-          Dequiri@hotmail.com
-
-        </div>
-
-      </a>
-
-
-      <!-- DIRECCIÓN -->
-
-    <a
-  class="item"
-  href="https://www.google.com/maps/search/?api=1&query=Nishadent+Av.+Zaragoza+Mz.+F+Lote+2+Lima+Peru"
-  target="_blank"
-  rel="noopener"
->
-
-        <div class="icon">
-          ⌖
-        </div>
-
-        <div class="text">
-
-          <span class="label">
-            DIRECCIÓN
-          </span>
-
-          Av. Zaragoza MZ. F Lote 2, Lima, Perú, 15307
-
-        </div>
-
-      </a>
-
-
-    </section>
-
-
-    <!-- GUARDAR CONTACTO -->
-
-    <a
-      class="save"
-      href="contact.vcf"
-    >
-
-      GUARDAR CONTACTO
-
-    </a>
-
-
-    <!-- FACEBOOK -->
-
-    <a
-      class="save facebook"
-      href="https://www.facebook.com/profile.php?id=100042064522523&locale=es_LA"
-      target="_blank"
-      rel="noopener"
-    >
-
-      📘 VISITAR FACEBOOK
-
-    </a>
-
-
-    <!-- NOTA -->
-
-    <div class="note">
-
-      Al tocar el botón podrás agregar los datos de la Dra. Denisse a tus contactos.
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-      Tu identidad digital, en un toque.
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
+  </section>
+
+  <section class="contact-section">
+    <main class="contact-container">
+      <div class="logo">TAP<span>5</span></div>
+      <div class="avatar" aria-label="Iniciales de la Dra. Denisse Quiñones">DQ</div>
+      <h1>Dra. Denisse Quiñones</h1>
+      <div class="company">NISHADENT</div>
+
+      <nav class="socials" aria-label="Redes sociales y contacto">
+        <a class="social whatsapp" href="https://wa.me/51994827954" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16 3.2A12.6 12.6 0 0 0 5.2 22.3L3.5 28.7l6.6-1.7A12.6 12.6 0 1 0 16 3.2Zm0 22.8a10.1 10.1 0 0 1-5.1-1.4l-.4-.2-3.9 1 1-3.8-.3-.4A10.1 10.1 0 1 1 16 26Z"/>
+            <path fill="currentColor" d="M22 18.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.9 5.1.8.3 1.4.5 1.9.6.8.3 1.5.2 2.1.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+          </svg>
+        </a>
+        <a class="social facebook" href="https://www.facebook.com/profile.php?id=100042064522523&locale=es_LA" target="_blank" rel="noopener" aria-label="Visitar Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M13.6 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5H17V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.5v3.2h2.8V21h3.3Z"/>
+          </svg>
+        </a>
+      </nav>
+
+      <section class="info" aria-label="Datos de contacto">
+        <a class="item" href="tel:+51994827954">
+          <div class="icon" aria-hidden="true">☎</div>
+          <div class="text"><span class="label">TELÉFONO</span>994 827 954</div>
+        </a>
+        <a class="item" href="mailto:Dequiri@hotmail.com">
+          <div class="icon" aria-hidden="true">✉</div>
+          <div class="text"><span class="label">CORREO ELECTRÓNICO</span>Dequiri@hotmail.com</div>
+        </a>
+        <a class="item" href="https://www.google.com/maps/search/?api=1&query=Nishadent+Av.+Zaragoza+Mz.+F+Lote+2+Lima+Peru" target="_blank" rel="noopener" aria-label="Abrir dirección de Nishadent en Google Maps">
+          <div class="icon" aria-hidden="true">⌖</div>
+          <div class="text"><span class="label">DIRECCIÓN</span>Av. Zaragoza MZ. F Lote 2, Lima, Perú, 15307</div>
+        </a>
+      </section>
+
+      <a class="action" href="contact.vcf">GUARDAR CONTACTO</a>
+      <a class="action call" href="tel:+51994827954">LLAMAR A NISHADENT</a>
+
+      <div class="note">Guarda los datos de la Dra. Denisse Quiñones directamente en tus contactos.</div>
+      <footer class="footer">Tu identidad digital, en un toque.<br><strong>Powered by TAP5</strong></footer>
+    </main>
+  </section>
 </body>
-
 </html>
