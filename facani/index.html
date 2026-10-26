@@ -44,6 +44,21 @@ h1{margin:0;text-align:center;font-size:27px;line-height:1.2;font-weight:850}
 footer{padding:20px 8px 0;margin-top:22px;border-top:1px solid rgba(255,255,255,.1);color:#7e8ba0;text-align:center;font-size:10px;letter-spacing:1px}
 footer strong{color:#c4d8f5}
 @media(max-width:360px){.profile{padding:23px 15px}h1{font-size:24px}.socials{gap:12px}.hero{min-height:560px}}
+
+    .tap5-promo {
+      margin:18px 4px 0; padding:15px 12px 0; border-top:1px solid rgba(255,255,255,.08);
+      text-align:center;
+    }
+    .tap5-promo__title { margin:0 0 10px; color:#c4d8f5; font-size:12px; line-height:1.4; font-weight:700; }
+    .tap5-promo__button {
+      display:block; width:100%; min-height:44px; padding:12px 10px; border-radius:12px;
+      color:var(--promo-text,#fff); background:var(--promo-bg,#17469e); border:1px solid var(--promo-border,transparent);
+      text-decoration:none; text-align:center; font-size:11px; line-height:1.35; font-weight:850; letter-spacing:.45px;
+      box-shadow:0 4px 14px rgba(0,0,0,.2); transition:transform .15s ease;
+    }
+    .tap5-promo__button:active { transform:scale(.985); }
+    .tap5-promo__title { color:#aab7ca; }
+    .tap5-promo__button { --promo-bg:linear-gradient(100deg,#0877ee,#13a7f5); --promo-border:rgba(41,216,255,.35); }
 </style>
 </head>
 <body>
@@ -95,6 +110,10 @@ footer strong{color:#c4d8f5}
 
   <p class="note">Al tocar «Guardar contacto» podrás agregar los datos de Abel Villar a tus contactos.</p>
   <footer>Tu identidad digital, en un toque.<br><br>Powered by <strong>TAP5</strong></footer>
+      <section class="tap5-promo" aria-label="Conoce las Business Cards Tap5">
+        <p class="tap5-promo__title">¿Quieres tu propia tarjeta digital?</p>
+        <a class="tap5-promo__button" href="https://wa.me/51912105258?text=Hola%2C%20estoy%20interesado%20en%20adquirir%20una%20Business%20Card%20de%20Tap%20Five" target="_blank" rel="noopener noreferrer">CONOCE LAS BUSINESS CARDS TAP5</a>
+      </section>
 </section>
 </main>
 </body>

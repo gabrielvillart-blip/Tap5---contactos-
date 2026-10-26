@@ -104,6 +104,21 @@
       .company { font-size:13px; }
       .hero { min-height:560px; }
     }
+
+    .tap5-promo {
+      margin:18px 4px 0; padding:15px 12px 0; border-top:1px solid rgba(255,255,255,.08);
+      text-align:center;
+    }
+    .tap5-promo__title { margin:0 0 10px; color:#c4d8f5; font-size:12px; line-height:1.4; font-weight:700; }
+    .tap5-promo__button {
+      display:block; width:100%; min-height:44px; padding:12px 10px; border-radius:12px;
+      color:var(--promo-text,#fff); background:var(--promo-bg,#17469e); border:1px solid var(--promo-border,transparent);
+      text-decoration:none; text-align:center; font-size:11px; line-height:1.35; font-weight:850; letter-spacing:.45px;
+      box-shadow:0 4px 14px rgba(0,0,0,.2); transition:transform .15s ease;
+    }
+    .tap5-promo__button:active { transform:scale(.985); }
+    .tap5-promo__title { color:var(--muted); }
+    .tap5-promo__button { --promo-bg:#17469e; --promo-border:#6f9dff; }
   </style>
 </head>
 <body>
@@ -162,6 +177,10 @@
 
       <div class="note">Guarda los datos de Genaro Quiñones directamente en tus contactos.</div>
       <footer class="footer">Tu identidad digital, en un toque.<br><strong>Powered by TAP5</strong></footer>
+      <section class="tap5-promo" aria-label="Conoce las Business Cards Tap5">
+        <p class="tap5-promo__title">¿Quieres tu propia tarjeta digital?</p>
+        <a class="tap5-promo__button" href="https://wa.me/51912105258?text=Hola%2C%20estoy%20interesado%20en%20adquirir%20una%20Business%20Card%20de%20Tap%20Five" target="_blank" rel="noopener noreferrer">CONOCE LAS BUSINESS CARDS TAP5</a>
+      </section>
     </main>
   </section>
 </body>
