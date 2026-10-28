@@ -2,72 +2,236 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#050912">
-  <meta name="description" content="Electronic Center - soluciones tecnológicas, reparación de celulares y servicio técnico. Contacta a Frank Zevallos Ocampo.">
-  <title>Electronic Center | Tap5 NFC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Tarjeta digital de Electronic Center. Reparación de celulares, flasheos, repuestos y accesorios electrónicos.">
+  <title>Electronic Center | Tap5 Business Card</title>
   <style>
-    :root{--blue:#075bff;--cyan:#00b9ff;--bg:#050912;--panel:#0b1424;--text:#f7fbff;--muted:#b9c7d8;--green:#08b65b}
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;width:100%;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-    body{overflow-x:hidden}
-    .page{width:100%;min-height:100vh;background:linear-gradient(180deg,#f8fbff 0,#eaf4ff 29%,#07101d 42%,#03070e 100%)}
-    .hero{width:100%;height:clamp(250px,54vw,470px);overflow:hidden;background:#fff}
-    .hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
-    .content{width:100%;padding:28px 20px max(34px,env(safe-area-inset-bottom));margin:0 auto;background:radial-gradient(ellipse at 50% 0%,#102b4c 0,#07111f 44%,#03070e 100%);text-align:center}
-    .brand{font-weight:900;font-size:clamp(12px,3.5vw,17px);letter-spacing:.28em;color:#eaf7ff;margin:0 0 8px}
-    .brand span{color:var(--cyan)}
-    .rule{width:100px;height:3px;border-radius:4px;background:linear-gradient(90deg,var(--cyan),var(--blue));margin:0 auto 20px}
-    h1{font-size:clamp(22px,6vw,30px);line-height:1.15;margin:0 0 8px;font-weight:700}
-    .role{margin:0 0 25px;color:#c5d8ed;font-size:12px;letter-spacing:.25em;text-transform:uppercase}
-    .actions{display:grid;gap:13px;width:100%;max-width:520px;margin:0 auto}
-    .btn{min-height:64px;display:flex;align-items:center;justify-content:center;gap:13px;padding:14px 17px;border-radius:17px;text-decoration:none;font-weight:800;letter-spacing:.035em;font-size:14px;color:#fff;border:1px solid rgba(90,173,255,.65);background:linear-gradient(135deg,#0649c9,#07338d);box-shadow:0 8px 22px #001a42a8;transition:transform .15s ease,filter .15s ease}
-    .btn:active{transform:scale(.985);filter:brightness(1.12)}
-    .btn svg{width:27px;height:27px;flex:0 0 27px}
-    .btn.whatsapp{background:linear-gradient(135deg,#08b85b,#078b45);border-color:#21e078;box-shadow:0 8px 22px #003d21a8}
-    .btn.contact{background:linear-gradient(135deg,#075bff,#063b9c)}
-    .btn.call{background:linear-gradient(135deg,#079b50,#04713b);border-color:#20ce78}
-    .btn.email{background:#fff;color:#101827;border-color:#dce5ef;box-shadow:0 8px 22px #0005}
-    .btn.maps{background:linear-gradient(135deg,#075bff,#063b9c)}
-    .btn .label{flex:1;text-align:center}
-    .chevron{font-size:25px;font-weight:400;opacity:.85;line-height:1}
-    .footer{font-size:10px;color:#6f8aa7;letter-spacing:.12em;margin:24px 0 0}
-    @media(min-width:700px){.content{padding-top:32px}.actions{grid-template-columns:1fr 1fr}.btn.contact,.btn.whatsapp,.btn.maps{grid-column:1/-1}.hero{height:min(45vw,520px)}}
+    :root {
+      --bg: #07111f;
+      --panel: #0d1b2b;
+      --panel-2: #10253a;
+      --text: #f5f8fc;
+      --muted: #b9c7d8;
+      --cyan: #22d3ee;
+      --blue: #247bff;
+      --border: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at top, rgba(36,123,255,.15), transparent 44%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .page { width: 100%; max-width: 560px; margin: 0 auto; padding: 0 16px 34px; }
+    .hero {
+      position: relative;
+      margin: 0 -16px;
+      min-height: 65svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #10243b;
+      isolation: isolate;
+    }
+    .hero img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(2,8,18,.04) 25%, rgba(2,8,18,.18) 53%, rgba(2,8,18,.92) 100%);
+    }
+    .hero-content { width: 100%; padding: 30px 22px 25px; text-align: center; }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      background: rgba(5,15,30,.68);
+      color: #eafaff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+    .brand-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+    .hero h1 { margin: 13px 0 5px; font-size: clamp(27px, 7vw, 38px); line-height: 1.05; font-weight: 850; letter-spacing: -.035em; text-shadow: 0 2px 16px rgba(0,0,0,.5); }
+    .hero p { margin: 0 auto; max-width: 360px; color: #e4edf7; font-size: 13px; line-height: 1.5; }
+    .scroll-cue {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      margin-top: 22px;
+      color: white;
+      text-decoration: none;
+      font-size: 10px;
+      line-height: 1.4;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .arrow {
+      width: 30px; height: 30px; display: grid; place-items: center;
+      border: 1px solid rgba(255,255,255,.6); border-radius: 50%;
+      background: rgba(4,13,27,.55);
+      animation: nudge 1.7s infinite;
+    }
+    @keyframes nudge { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+    }
+    .contact-section { padding: 30px 0 0; }
+    .tap5-mark { text-align: center; margin-bottom: 20px; }
+    .tap5-logo {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 900; font-size: 13px; letter-spacing: .22em;
+    }
+    .tap5-symbol {
+      display: inline-grid; place-items: center; width: 28px; height: 28px;
+      border-radius: 9px; color: #07111f; font-size: 15px;
+      background: linear-gradient(135deg, #6ee7f9, #2678ff);
+      letter-spacing: 0;
+    }
+    .eyebrow { color: var(--cyan); font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 8px; }
+    h2 { margin: 0; text-align: center; font-size: 29px; line-height: 1.15; letter-spacing: -.03em; }
+    .business-name { margin: 8px 0 0; color: var(--muted); text-align: center; font-size: 14px; }
+    .divider { height: 1px; margin: 24px 0; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+    .socials { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+    .social-link {
+      min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 9px; padding: 16px 6px 14px; border: 1px solid var(--border);
+      border-radius: 18px; background: rgba(13,27,43,.86); text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .social-link:hover, .social-link:focus-visible { transform: translateY(-2px); border-color: rgba(34,211,238,.6); background: var(--panel-2); }
+    .icon-wrap { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; background: #fff; }
+    .icon-wrap svg { width: 29px; height: 29px; display: block; }
+    .social-label { font-size: 12px; font-weight: 750; }
+    .social-sub { display: block; max-width: 100%; overflow-wrap: anywhere; color: var(--muted); font-size: 10px; text-align: center; line-height: 1.4; }
+    .actions { display: grid; gap: 11px; margin-top: 25px; }
+    .action {
+      min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 18px; border: 1px solid rgba(255,255,255,.14); border-radius: 15px;
+      background: var(--panel); color: var(--text); text-decoration: none; text-align: center;
+      font-size: 12px; font-weight: 850; letter-spacing: .08em;
+      transition: transform .18s ease, filter .18s ease;
+    }
+    .action:hover, .action:focus-visible { transform: translateY(-1px); filter: brightness(1.12); }
+    .action-primary { border: 0; color: #061321; background: linear-gradient(100deg, #66e6f6, #5da1ff); }
+    .action svg { width: 19px; height: 19px; flex: 0 0 auto; }
+    .note { margin: 19px 6px 0; text-align: center; color: #91a4bb; font-size: 11px; line-height: 1.6; }
+    footer { padding-top: 27px; text-align: center; color: #70849c; font-size: 10px; letter-spacing: .12em; }
+    footer strong { color: #b7c9dc; }
+    @media (min-width: 600px) {
+      .hero { min-height: 640px; border-radius: 0 0 26px 26px; }
+      .page { padding-left: 22px; padding-right: 22px; }
+      .hero { margin-left: -22px; margin-right: -22px; }
+    }
   </style>
 </head>
 <body>
   <main class="page">
-    <section class="hero" aria-label="Electronic Center - servicios tecnológicos">
-      <img src="electronic-center-banner.png" alt="Electronic Center: reparación de celulares, accesorios, servicio técnico, equipos y repuestos">
+    <section class="hero" aria-label="Portada de Electronic Center">
+      <img src="./electronic-center-portada.png" alt="Local físico de Electronic Center" fetchpriority="high">
+      <div class="hero-content">
+        <span class="brand-pill"><span class="brand-dot"></span> Tap5 Business Card</span>
+        <h1>Electronic Center</h1>
+        <p>Reparación de celulares · Flasheos · Repuestos en general</p>
+        <a class="scroll-cue" href="#datos" aria-label="Desliza hacia abajo para ver los datos">
+          <span>DESLIZA HACIA ABAJO<br>PARA VER LOS DATOS</span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </a>
+      </div>
     </section>
-    <section class="content">
-      <p class="brand">TAP5 <span>·</span> NFC TECHNOLOGY</p>
-      <div class="rule"></div>
-      <h1>Frank Zevallos Ocampo</h1>
-      <p class="role">Técnico Electrónico</p>
-      <nav class="actions" aria-label="Contactar a Electronic Center">
-        <a class="btn whatsapp" href="https://wa.me/51981203206" target="_blank" rel="noopener">
-          <svg viewBox="0 0 32 32" aria-label="WhatsApp" role="img"><path fill="currentColor" d="M16 2.7A13.1 13.1 0 0 0 4.8 22.6L3 29l6.6-1.7A13.1 13.1 0 1 0 16 2.7Zm0 23.8a10.7 10.7 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.5Zm5.9-8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-2.5-1.5 9.4 9.4 0 0 1-1.7-2.1c-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a13.2 13.2 0 0 0 5.1 4.5c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.2-.3-.5-.4Z"/></svg>
-          <span class="label">WHATSAPP</span><span class="chevron">›</span>
+
+    <section class="contact-section" id="datos" aria-labelledby="owner-name">
+      <div class="tap5-mark">
+        <span class="tap5-logo"><span class="tap5-symbol">5</span> TAP5 <span style="color:var(--cyan)">NFC</span></span>
+      </div>
+      <p class="eyebrow" style="text-align:center">Conecta con nosotros</p>
+      <h2 id="owner-name">Frank Zevallos Ocampo</h2>
+      <p class="business-name">Electronic Center</p>
+
+      <div class="divider"></div>
+
+      <nav class="socials" aria-label="Redes sociales y correo">
+        <a class="social-link" href="https://wa.me/51981203206" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path fill="#25D366" d="M16 2.7A13.1 13.1 0 0 0 4.8 22.6L3 29l6.6-1.7A13.1 13.1 0 1 0 16 2.7Z"/>
+              <path fill="#fff" d="M23.2 19.1c-.4-.2-2.1-1-2.5-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7s-.8-1.9-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.7-.5Z"/>
+            </svg>
+          </span>
+          <span class="social-label">WhatsApp</span>
+          <span class="social-sub">981 203 206</span>
         </a>
-        <a class="btn contact" href="contacto.vcf" download="Frank_Zevallos_Ocampo.vcf">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Zm0 2c-4.2 0-7.6 2.1-7.6 4.7V21h11.8a5.1 5.1 0 0 1-.8-2.7c0-1.5.6-2.8 1.6-3.7A13.4 13.4 0 0 0 12 14Zm7.2 1.1v2.1h-2.1v2h2.1v2.1h2v-2.1h2.1v-2h-2.1v-2.1h-2Z"/></svg>
-          <span class="label">GUARDAR CONTACTO</span><span class="chevron">›</span>
+
+        <a class="social-link" href="https://www.tiktok.com/@francitozevallosocampo" target="_blank" rel="noopener noreferrer" aria-label="Visitar TikTok">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path fill="#25F4EE" d="M18.2 3h5c.3 3 2 5.1 4.8 6v4.9a14 14 0 0 1-4.8-1.5v9.1c0 5.2-3.7 8.4-8.5 8.4-4.5 0-8-3.1-8-7.7 0-5 4-8.1 8.7-7.8v5.1c-2.1-.5-3.7.7-3.7 2.7 0 1.7 1.2 2.8 2.9 2.8 1.9 0 3.1-1.2 3.1-3.8V3Z"/>
+              <path fill="#FE2C55" d="M15.8 5.2h4.5c.3 3 2 5.1 4.8 6v4.2a14 14 0 0 1-4.8-1.5V23c0 5.2-3.7 8.4-8.5 8.4-2.1 0-4-.7-5.4-2 1.3.8 2.8 1.2 4.4 1.2 4.8 0 8.5-3.2 8.5-8.4v-9.1a14 14 0 0 0 4.8 1.5v-3.6c-2.8-.9-4.5-3-4.8-6h-3.5Z" opacity=".95" transform="translate(-2 -1)"/>
+              <path fill="#111827" d="M17.2 3h4.5c.3 3 2 5.1 4.8 6v4.2a14 14 0 0 1-4.8-1.5v9.1c0 5.2-3.7 8.4-8.5 8.4-4.5 0-8-3.1-8-7.7 0-5 4-8.1 8.7-7.8v4.6c-2.1-.5-3.7.7-3.7 2.7 0 1.7 1.2 2.8 2.9 2.8 1.9 0 3.1-1.2 3.1-3.8V3Z"/>
+            </svg>
+          </span>
+          <span class="social-label">TikTok</span>
+          <span class="social-sub">@francitozevallosocampo</span>
         </a>
-        <a class="btn call" href="tel:+51981203206">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.2 11.2 0 0 0 3.5.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17.9 17.9 0 0 1 3 4a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11.2 11.2 0 0 0 .6 3.5 1 1 0 0 1-.2 1Z"/></svg>
-          <span class="label">LLAMAR</span><span class="chevron">›</span>
-        </a>
-        <a class="btn email" href="mailto:francito874@gmail.com">
-          <svg viewBox="0 0 48 36" aria-label="Gmail" role="img"><path fill="#4285F4" d="M4 32V5.5L9 9.2V32Z"/><path fill="#34A853" d="M39 32V9.2l5-3.7V32Z"/><path fill="#EA4335" d="M4 5.5 9 1h30l5 4.5-5 3.7L24 17 9 9.2Z"/><path fill="#C5221F" d="M9 9.2 24 20l15-10.8v6L24 26 9 15.2Z"/><path fill="#FBBC04" d="M39 9.2 44 5.5V32h-5Z"/></svg>
-          <span class="label">ENVIAR CORREO</span><span class="chevron">›</span>
-        </a>
-        <a class="btn maps" href="https://www.google.com/maps/search/?api=1&query=CC+Polvos+Azules+Calle+6+Tienda+8+Alt+Pasaje+10+Sotano+Lima+Peru" target="_blank" rel="noopener">
-          <svg viewBox="0 0 48 48" aria-label="Google Maps" role="img"><path fill="#34A853" d="M24 2C13.7 2 6 9.8 6 19.1c0 12.8 18 26.9 18 26.9s18-14.1 18-26.9C42 9.8 34.3 2 24 2Z"/><path fill="#4285F4" d="M24 2c-6.1 0-11.3 3-14.8 7.6l14.8 18.1 14.8-18.1C35.3 5 30.1 2 24 2Z"/><path fill="#FBBC04" d="M9.2 9.6C7.2 12.3 6 15.6 6 19.1c0 12.8 18 26.9 18 26.9L24 27.7Z"/><circle cx="24" cy="18" r="7.1" fill="#fff"/><circle cx="24" cy="18" r="4.2" fill="#EA4335"/></svg>
-          <span class="label">VISITAR DIRECCIÓN</span><span class="chevron">›</span>
+
+        <a class="social-link" href="mailto:francito874@gmail.com" aria-label="Enviar correo electrónico">
+          <span class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path fill="#4285F4" d="M3 8.5v15c0 1.1.9 2 2 2h4V12.2L3 8.5Z"/>
+              <path fill="#34A853" d="M23 25.5h4c1.1 0 2-.9 2-2v-15l-6 3.7v13.3Z"/>
+              <path fill="#EA4335" d="M5 6.5h22c1.1 0 2 .9 2 2l-13 9.2L3 8.5c0-1.1.9-2 2-2Z"/>
+              <path fill="#C5221F" d="M23 12.2V25.5h4c1.1 0 2-.9 2-2V8.5l-6 3.7Z"/>
+              <path fill="#FBBC04" d="M3 8.5v15c0 1.1.9 2 2 2h4V12.2L3 8.5Z" opacity=".0"/>
+              <path fill="#4285F4" d="M9 12.2v13.3h14V12.2l-7 5-7-5Z"/>
+              <path fill="#fff" d="M9 12.2 16 17l7-4.8V25.5H9V12.2Z" opacity=".08"/>
+            </svg>
+          </span>
+          <span class="social-label">Gmail</span>
+          <span class="social-sub">Enviar correo</span>
         </a>
       </nav>
-      <p class="footer">ELECTRONIC CENTER · TAP5 NFC</p>
+
+      <div class="actions" aria-label="Acciones de contacto">
+        <a class="action action-primary" href="./contacto-electronic-center.vcf" download="Frank-Zevallos-Ocampo.vcf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+          GUARDAR CONTACTO
+        </a>
+        <a class="action" href="tel:+51981203206">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/></svg>
+          LLAMAR
+        </a>
+        <a class="action" href="https://share.google/cKQyn85tpptIGmmmT" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          UBICACIÓN
+        </a>
+      </div>
+
+      <p class="note">Reparación de celulares, flasheos, repuestos y accesorios electrónicos.</p>
+      <footer>UNA CONEXIÓN, <strong>UN TOQUE</strong> · TAP5 NFC</footer>
     </section>
   </main>
 </body>
