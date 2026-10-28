@@ -1,40 +1,517 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#07111f"><meta name="description" content="Catálogo de productos y servicios de Electronic Center. Consulta por WhatsApp.">
-<title>Catálogo | Electronic Center</title>
-<style>
-:root{--bg:#07111f;--panel:#0d1b2b;--text:#f5f8fc;--muted:#b8c7d9;--cyan:#27d7f2;--blue:#347fff;--border:rgba(255,255,255,.13)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:radial-gradient(ellipse at top,rgba(52,127,255,.13),transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:inherit}.wrap{width:min(100% - 28px,920px);margin:auto;padding:24px 0 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:9px;font-weight:900;letter-spacing:.13em;font-size:12px}.symbol{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#07111f;background:linear-gradient(135deg,#69ecf8,#347fff);font-size:16px}.back{padding:10px 13px;border:1px solid var(--border);border-radius:12px;text-decoration:none;font-size:12px;font-weight:800}.eyebrow{text-align:center;color:var(--cyan);font-size:10px;letter-spacing:.2em;font-weight:850;text-transform:uppercase;margin:12px 0 9px}h1{text-align:center;font-size:clamp(28px,7vw,42px);line-height:1.08;letter-spacing:-.04em;margin:0} .intro{text-align:center;color:var(--muted);line-height:1.65;font-size:14px;max-width:600px;margin:13px auto 30px}.section{margin:26px 0 32px;padding:20px;border:1px solid var(--border);border-radius:22px;background:rgba(13,27,43,.86);box-shadow:0 16px 40px rgba(0,0,0,.15)}.section h2{font-size:clamp(20px,5vw,26px);margin:0 0 8px;letter-spacing:-.025em}.desc{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.6}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{display:block;width:100%;height:210px;object-fit:cover;border-radius:13px;border:1px solid var(--border);background:#101c2b;cursor:zoom-in}.videos{display:grid;grid-template-columns:1fr;gap:14px}.video-card{overflow:hidden;border:1px solid var(--border);border-radius:15px;background:#081321}.video-card video{display:block;width:100%;max-height:440px;background:#000}.video-title{font-size:14px;font-weight:800;padding:12px 13px 0}.video-sub{font-size:12px;color:var(--muted);padding:5px 13px 13px;line-height:1.5}.cta{display:flex;justify-content:center;align-items:center;gap:9px;margin-top:18px;padding:15px 17px;border-radius:14px;text-decoration:none;text-align:center;color:#061321;font-size:12px;line-height:1.4;font-weight:900;letter-spacing:.04em;background:linear-gradient(100deg,#68e8f5,#70a9ff);width:100%;border:0}.cta svg{width:20px;height:20px;flex:0 0 auto}.hint{font-size:11px;line-height:1.6;color:#8fa5bd;text-align:center;margin:22px 5px 0}footer{text-align:center;color:#7489a2;font-size:10px;letter-spacing:.13em;padding-top:18px}footer strong{color:#c5d6e8}.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10;align-items:center;justify-content:center;padding:18px}.lightbox.open{display:flex}.lightbox img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:8px}.close{position:absolute;right:18px;top:15px;border:1px solid #ffffff66;border-radius:50%;width:42px;height:42px;background:#111d;color:white;font-size:26px;cursor:pointer}@media(min-width:620px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.photo{height:230px}.videos{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:25px}}@media(min-width:900px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}.photo{height:210px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Catálogo de productos y servicios de Electronic Center. Consulta disponibilidad de equipos Apple y servicios técnicos.">
+  <title>Catálogo | Electronic Center - Tap5</title>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0d1b2b;
+      --text: #f5f8fc;
+      --muted: #b8c7d9;
+      --cyan: #27d7f2;
+      --blue: #347fff;
+      --border: rgba(255,255,255,.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at top, rgba(52,127,255,.15), transparent 48%),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(100% - 28px, 920px);
+      margin: 0 auto;
+      padding: 18px 0 40px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    .symbol {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--cyan), #6da0ff);
+      color: #07111f;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .back {
+      text-decoration: none;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .eyebrow {
+      margin: 8px 0 0;
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 3px 0 8px;
+      font-size: clamp(29px, 6vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+    }
+
+    .intro {
+      margin: 0 0 25px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 23px;
+      background: rgba(13,27,43,.88);
+      box-shadow: 0 15px 45px rgba(0,0,0,.12);
+    }
+
+    .section h2 {
+      margin: 0 0 7px;
+      font-size: clamp(21px, 4vw, 27px);
+      line-height: 1.25;
+    }
+
+    .desc {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #101e2d;
+      cursor: zoom-in;
+    }
+
+    .video {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      margin: 12px 0;
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 52px;
+      margin-top: 18px;
+      padding: 13px 16px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(100deg, #60e4f2, #73a1ff);
+      color: #07111f;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-align: center;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .cta:active {
+      transform: scale(.99);
+    }
+
+    .empty {
+      padding: 16px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 20px 8px;
+      color: #8295aa;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .footer strong {
+      color: var(--text);
+    }
+
+    .footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .lightbox {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.94);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      background: #172537;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        width: min(100% - 20px, 920px);
+        padding-top: 13px;
+      }
+
+      .section {
+        padding: 15px;
+        border-radius: 19px;
+      }
+
+      .gallery {
+        gap: 9px;
+      }
+
+      .photo {
+        height: 185px;
+        border-radius: 12px;
+      }
+
+      .brand {
+        font-size: 12px;
+        letter-spacing: 1.4px;
+      }
+
+      .symbol {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+      }
+
+      .photo {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
-<body><main class="wrap">
-<header class="top"><div class="brand"><span class="symbol">5</span><span>TAP5 <span style="color:var(--cyan)">NFC</span></span></div><a class="back" href="./index.html">← Volver a la tarjeta</a></header>
-<p class="eyebrow">Electronic Center</p><h1>Productos y servicios</h1><p class="intro">Explora nuestros equipos y servicios técnicos. Selecciona la opción que te interesa y consúltanos directamente por WhatsApp. No mostramos precios en este catálogo.</p>
-<section class="section" id="venta-ipads-iphones"><h2>Venta de iPads y iPhones</h2><p class="desc">Consulta disponibilidad, modelos, colores y características de los equipos. Las imágenes se muestran juntas dentro de este mismo apartado.</p><div class="gallery">
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-01.jpeg" alt="Equipo Apple disponible para consulta, imagen 1" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-02.jpeg" alt="Equipo Apple disponible para consulta, imagen 2" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-03.jpeg" alt="Equipo Apple disponible para consulta, imagen 3" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-04.jpeg" alt="Equipo Apple disponible para consulta, imagen 4" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-05.jpeg" alt="Equipo Apple disponible para consulta, imagen 5" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-06.jpeg" alt="Equipo Apple disponible para consulta, imagen 6" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-07.jpeg" alt="Equipo Apple disponible para consulta, imagen 7" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-08.jpeg" alt="Equipo Apple disponible para consulta, imagen 8" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-09.jpeg" alt="Equipo Apple disponible para consulta, imagen 9" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-10.jpeg" alt="Equipo Apple disponible para consulta, imagen 10" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-11.jpeg" alt="Equipo Apple disponible para consulta, imagen 11" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-12.jpeg" alt="Equipo Apple disponible para consulta, imagen 12" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-13.jpeg" alt="Equipo Apple disponible para consulta, imagen 13" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-14.jpeg" alt="Equipo Apple disponible para consulta, imagen 14" data-lightbox>
-<img class="photo" loading="lazy" src="./assets/catalogo/venta-ipads-iphones/venta-ipads-iphones-15.jpeg" alt="Equipo Apple disponible para consulta, imagen 15" data-lightbox>
-</div><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20estoy%20interesado%20en%20consultar%20sobre%20Venta%20de%20iPads%20y%20iPhones."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#061321" d="M16 2.7A13.1 13.1 0 0 0 4.8 22.6L3 29l6.6-1.7A13.1 13.1 0 1 0 16 2.7Z"/><path fill="#68e8f5" d="M23.2 19.1c-.4-.2-2.1-1-2.5-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7s-.8-1.9-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.7-.5Z"/></svg>CONSULTAR POR WHATSAPP</a></section>
-<section class="section" id="servicio-tecnico-y-ventas"><h2>Servicio técnico y ventas</h2><p class="desc">Conoce una muestra en video de nuestros productos y servicios.</p><div class="videos"><article class="video-card"><video controls playsinline preload="metadata"><source src="./assets/catalogo/videos/servicio-tecnico-y-ventas.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="video-title">Servicio técnico y ventas</div><div class="video-sub">Consulta por equipos, reparaciones y otros servicios.</div></article></div><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20estoy%20interesado%20en%20consultar%20sobre%20Servicio%20t%C3%A9cnico%20y%20ventas.">CONSULTAR POR WHATSAPP</a></section>
-<section class="section" id="reparacion-tactil-ipads"><h2>Reparación táctil de iPads</h2><p class="desc">Servicio técnico para revisar y solucionar fallas táctiles en iPads. La reparación se confirma tras evaluar el equipo.</p><div class="videos"><article class="video-card"><video controls playsinline preload="metadata"><source src="./assets/catalogo/videos/reparacion-tactil-ipads.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="video-title">Reparación táctil de iPads</div></article></div><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20estoy%20interesado%20en%20consultar%20sobre%20Reparaci%C3%B3n%20t%C3%A1ctil%20de%20iPads.">CONSULTAR POR WHATSAPP</a></section>
-<section class="section" id="cambio-base-pantalla-iphones"><h2>Cambio de base y pantalla iPhones</h2><p class="desc">Consulta por cambio de base y pantalla para iPhone. Indícanos el modelo para evaluar disponibilidad y servicio.</p><div class="videos"><article class="video-card"><video controls playsinline preload="metadata"><source src="./assets/catalogo/videos/cambio-base-y-pantalla-iphones.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="video-title">Cambio de base y pantalla iPhones</div></article></div><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20estoy%20interesado%20en%20consultar%20sobre%20Cambio%20de%20base%20y%20pantalla%20iPhones.">CONSULTAR POR WHATSAPP</a></section>
-<section class="section" id="cambio-tapa-trasera-iphones"><h2>Cambio de tapa trasera iPhones</h2><p class="desc">Consulta por el cambio de tapa trasera según el modelo de tu iPhone.</p><div class="videos"><article class="video-card"><video controls playsinline preload="metadata"><source src="./assets/catalogo/videos/cambio-tapa-trasera-iphones.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="video-title">Cambio de tapa trasera iPhones</div></article></div><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20estoy%20interesado%20en%20consultar%20sobre%20Cambio%20de%20tapa%20trasera%20iPhones.">CONSULTAR POR WHATSAPP</a></section>
-<p class="hint">¿No encuentras lo que buscas? Escríbenos y cuéntanos qué equipo o reparación necesitas.</p><a class="cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/51981203206?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20a%20Electronic%20Center.">ESCRIBIR A ELECTRONIC CENTER</a><footer>UNA CONEXIÓN, <strong>UN TOQUE</strong> · TAP5 NFC</footer>
-</main><div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen"><button class="close" aria-label="Cerrar imagen">×</button><img src="" alt="Imagen ampliada"></div><script>
-const box=document.getElementById('lightbox'),big=box.querySelector('img');document.querySelectorAll('[data-lightbox]').forEach(img=>img.addEventListener('click',()=>{big.src=img.src;big.alt=img.alt;box.classList.add('open')}));function closeBox(){box.classList.remove('open');big.src=''}box.querySelector('.close').addEventListener('click',closeBox);box.addEventListener('click',e=>{if(e.target===box)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
-</script></body></html>
+
+<body>
+  <main class="wrap">
+
+    <header class="top">
+      <div class="brand">
+        <span class="symbol">5</span>
+        <span>TAP5 <span style="color:var(--cyan)">NFC</span></span>
+      </div>
+      <a class="back" href="./index.html">← Volver a la tarjeta</a>
+    </header>
+
+    <p class="eyebrow">Electronic Center</p>
+    <h1>Productos y servicios</h1>
+    <p class="intro">
+      Explora nuestros equipos y servicios técnicos. Consulta por WhatsApp
+      la disponibilidad, los modelos, los colores y las características.
+      No se muestran precios en este catálogo.
+    </p>
+
+    <!-- VENTA DE IPADS Y IPHONES -->
+    <section class="section" id="venta-ipads-iphones">
+      <h2>Venta de iPads y iPhones</h2>
+      <p class="desc">
+        Consulta disponibilidad, modelos, colores y características de los
+        equipos. Todas las fotografías se muestran juntas dentro de este apartado.
+      </p>
+
+      <div class="gallery" id="galeria-equipos"></div>
+
+      <a class="cta" id="consulta-equipos" target="_blank"
+         rel="noopener noreferrer">
+        CONSULTAR POR IPADS Y IPHONES EN WHATSAPP
+      </a>
+    </section>
+
+    <!-- SERVICIO TÉCNICO Y VENTAS -->
+    <section class="section" id="servicio-tecnico-y-ventas">
+      <h2>Servicio técnico y ventas</h2>
+      <p class="desc">
+        Conoce nuestros servicios técnicos y consulta por ventas, reparaciones
+        y disponibilidad de equipos.
+      </p>
+
+      <video class="video" controls playsinline preload="metadata">
+        <source src="./servicio-tecnico-y-ventas.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+
+      <a class="cta" data-producto="Servicio técnico y ventas"
+         target="_blank" rel="noopener noreferrer">
+        CONSULTAR POR WHATSAPP
+      </a>
+    </section>
+
+    <!-- REPARACIÓN TÁCTIL DE IPADS -->
+    <section class="section" id="reparacion-tactil-ipads">
+      <h2>Reparación táctil de iPads</h2>
+      <p class="desc">
+        Consulta por diagnóstico y reparación de problemas táctiles en iPads.
+        La reparación se evalúa según el modelo y la falla del equipo.
+      </p>
+
+      <video class="video" controls playsinline preload="metadata">
+        <source src="./reparacion-tactil-ipads.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+
+      <a class="cta" data-producto="Reparación táctil de iPads"
+         target="_blank" rel="noopener noreferrer">
+        CONSULTAR POR WHATSAPP
+      </a>
+    </section>
+
+    <!-- CAMBIO DE BASE Y PANTALLA -->
+    <section class="section" id="cambio-base-pantalla-iphones">
+      <h2>Cambio de base y pantalla iPhones</h2>
+      <p class="desc">
+        Consulta por cambio de base, pantalla y reparación de iPhones.
+        Confirma la compatibilidad con el modelo de tu equipo.
+      </p>
+
+      <video class="video" controls playsinline preload="metadata">
+        <source src="./cambio-base-y-pantalla-iphones.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+
+      <a class="cta" data-producto="Cambio de base y pantalla iPhones"
+         target="_blank" rel="noopener noreferrer">
+        CONSULTAR POR WHATSAPP
+      </a>
+    </section>
+
+    <!-- CAMBIO DE TAPA TRASERA -->
+    <section class="section" id="cambio-tapa-trasera-iphones">
+      <h2>Cambio de tapa trasera iPhones</h2>
+      <p class="desc">
+        Consulta por el cambio de tapa trasera de tu iPhone y la disponibilidad
+        de piezas según el modelo.
+      </p>
+
+      <video class="video" controls playsinline preload="metadata">
+        <source src="./cambio-tapa-trasera-iphones.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+
+      <a class="cta" data-producto="Cambio de tapa trasera iPhones"
+         target="_blank" rel="noopener noreferrer">
+        CONSULTAR POR WHATSAPP
+      </a>
+    </section>
+
+    <section class="section">
+      <h2>¿Buscas otro producto o servicio?</h2>
+      <p class="desc">
+        Escríbenos y cuéntanos qué equipo necesitas o qué reparación deseas consultar.
+      </p>
+      <a class="cta" id="consulta-general" target="_blank"
+         rel="noopener noreferrer">
+        CONTACTAR A ELECTRONIC CENTER
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p>Electronic Center · Reparación de celulares · Flasheos · Repuestos en general</p>
+      <p>Una conexión, <strong>un toque</strong> · TAP5 NFC</p>
+      <p>¿Quieres una tarjeta digital para tu negocio?</p>
+      <a id="tap5-contacto" class="cta" target="_blank"
+         rel="noopener noreferrer">
+        QUIERO MI BUSINESS CARD TAP5
+      </a>
+    </footer>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog"
+       aria-modal="true" aria-label="Vista ampliada de imagen">
+    <button class="close" id="cerrar-lightbox" aria-label="Cerrar">×</button>
+    <img id="imagen-ampliada" alt="Fotografía ampliada del equipo">
+  </div>
+
+  <script>
+    /*
+      IMPORTANTE:
+      Los archivos están directamente en la carpeta electronic-center.
+      Por eso las rutas comienzan con ./ y no con assets/catalogo/.
+    */
+
+    const WHATSAPP_ELECTRONIC_CENTER = "51981203206";
+    const WHATSAPP_TAP5 = "51912105258";
+
+    function enlaceWhatsApp(numero, mensaje) {
+      return "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+    }
+
+    function mensajeProducto(nombre) {
+      return "Hola, estoy interesado en consultar sobre el producto/servicio: " + nombre + ". ¿Me pueden brindar más información?";
+    }
+
+    document.getElementById("galeria-equipos").innerHTML =
+      Array.from({ length: 15 }, (_, i) => {
+        const numero = String(i + 1).padStart(2, "0");
+        const archivo = "./venta-ipads-iphones-" + numero + ".jpeg";
+
+        return `
+          <img
+            class="photo"
+            src="${archivo}"
+            alt="Equipo Apple disponible para consulta, imagen ${i + 1}"
+            loading="${i < 4 ? "eager" : "lazy"}"
+            decoding="async"
+            data-lightbox="${archivo}"
+          >
+        `;
+      }).join("");
+
+    document.getElementById("consulta-equipos").href =
+      enlaceWhatsApp(
+        WHATSAPP_ELECTRONIC_CENTER,
+        mensajeProducto("Venta de iPads y iPhones")
+      );
+
+    document.querySelectorAll("[data-producto]").forEach(boton => {
+      const nombre = boton.getAttribute("data-producto");
+      boton.href = enlaceWhatsApp(
+        WHATSAPP_ELECTRONIC_CENTER,
+        mensajeProducto(nombre)
+      );
+    });
+
+    document.getElementById("consulta-general").href =
+      enlaceWhatsApp(
+        WHATSAPP_ELECTRONIC_CENTER,
+        "Hola, estoy interesado en los productos y servicios de Electronic Center. ¿Me pueden ayudar?"
+      );
+
+    document.getElementById("tap5-contacto").href =
+      enlaceWhatsApp(
+        WHATSAPP_TAP5,
+        "Hola, estoy interesado en adquirir una Business Card de Tap Five."
+      );
+
+    const lightbox = document.getElementById("lightbox");
+    const imagenAmpliada = document.getElementById("imagen-ampliada");
+
+    document.getElementById("galeria-equipos").addEventListener("click", event => {
+      const imagen = event.target.closest("[data-lightbox]");
+      if (!imagen) return;
+
+      imagenAmpliada.src = imagen.getAttribute("data-lightbox");
+      lightbox.classList.add("open");
+    });
+
+    function cerrarLightbox() {
+      lightbox.classList.remove("open");
+      imagenAmpliada.src = "";
+    }
+
+    document.getElementById("cerrar-lightbox").addEventListener("click", cerrarLightbox);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) cerrarLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") cerrarLightbox();
+    });
+  </script>
+</body>
+</html>
+```
