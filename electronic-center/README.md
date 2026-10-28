@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34101268/README.md)
 # Electronic Center — Tap5 Business Card
 
 Archivos de la tarjeta digital de Frank Zevallos Ocampo.
