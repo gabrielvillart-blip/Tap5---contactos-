@@ -1,9 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
+N:Zevallos Ocampo;Frank;;;
 FN:Frank Zevallos Ocampo
 ORG:Electronic Center
-TITLE:Técnico Electrónico
-TEL;TYPE=CELL:+51981203206
-EMAIL:francito874@gmail.com
-ADR;TYPE=WORK:;;C.C. Polvos Azules, Calle 6, Tda. 8, Alt. Psje. 10, sótano;;;;Perú
+TEL;TYPE=CELL,VOICE:+51981203206
+EMAIL;TYPE=INTERNET:francito874@gmail.com
+URL:https://www.tiktok.com/@francitozevallosocampo
+URL:https://www.google.com/maps/place/Polvos+Azules,+Av.+Paseo+de+la+Rep%C3%BAblica,+La+Victoria+15033/@-12.0618937,-77.0341486,17z/data=!4m6!3m5!1s0x9105c8c075adae99:0x3baf3c9423111929!8m2!3d-12.0618937!4d-77.0341486!16s%2Fg%2F11r8f_d9c?source=lnms&g_ep=Eg1tbF8yMDI2MTAyNV8wIOC7DCoASAJQAg%3D%3D
 END:VCARD
