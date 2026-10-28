@@ -1,19 +1,22 @@
-[README.md](https://github.com/user-attachments/files/33913051/README.md)
-# Tap5 — Electronic Center
+[README.md](https://github.com/user-attachments/files/34101268/README.md)
+# Electronic Center — Tap5 Business Card
 
-## Publicar en GitHub Pages
-1. Crea un repositorio nuevo en GitHub (o abre el repositorio donde publicarás esta tarjeta).
-2. Sube `index.html` y `contacto.vcf` a la raíz del repositorio.
-3. En **Settings → Pages**, selecciona **Deploy from a branch**, rama `main` y carpeta `/ (root)`. Guarda.
-4. Espera a que GitHub Pages publique y prueba el enlace desde un teléfono.
-5. Programa la etiqueta NFC para abrir la URL publicada. En el chip guarda solamente la URL.
+Archivos de la tarjeta digital de Frank Zevallos Ocampo.
 
-## Datos incluidos
-- Electronic Center
-- Frank Zevallos Ocampo — Técnico Electrónico
-- Celular: 981 203 206
+## Archivos
+- `index.html`: interfaz de la tarjeta digital.
+- `electronic-center-portada.png`: fotografía vertical de portada.
+- `contacto.vcf`: contacto para guardar en la agenda.
+
+## Publicación
+Sube estos archivos a la carpeta `electronic-center` de la rama `main` del repositorio de Tap5. Conserva los nombres de los archivos, ya que `index.html` utiliza rutas relativas.
+
+## Datos configurados
+- Negocio: Electronic Center
+- Nombre: Frank Zevallos Ocampo
+- WhatsApp/teléfono: +51 981 203 206
+- TikTok: https://www.tiktok.com/@francitozevallosocampo
 - Correo: francito874@gmail.com
-- Dirección: C.C. Polvos Azules, Calle 6, Tda. 8, Alt. Psje. 10, sótano
+- Ubicación: enlace de Google Maps proporcionado por el propietario.
 
-## Pendiente antes de producción
-Confirmar el enlace exacto de Google Maps y agregar perfiles de redes sociales si el cliente los comparte.
+El catálogo de 25 productos queda pendiente de integrar cuando se proporcionen los productos y sus fotografías.
